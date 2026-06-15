@@ -1766,6 +1766,7 @@ class RuheOaseApp {
 
     startCanvasLoop() {
         if (this.animationFrameId) return;
+        this.resizeCanvas();
         this.animateThoughtsStream();
     }
 
