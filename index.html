@@ -291,17 +291,17 @@
                     <div class="glass-card interactive" onclick="app.switchTab('tiefenarbeit', 'mct')">
                         <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">⏱️</div>
                         <h3 data-l10n="deepwork_tab_mct" style="margin-bottom: 0.5rem;">Metakognition (MCT)</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary);">Grübelzeit-Timer & Aufmerksamkeitstraining (ATT).</p>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary);" data-l10n="dashboard_mct_desc">Grübelzeit-Timer & Aufmerksamkeitstraining (ATT).</p>
                     </div>
                     <div class="glass-card interactive" onclick="app.switchTab('tiefenarbeit', 'schemas')">
                         <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">📖</div>
                         <h3 data-l10n="deepwork_tab_schemas" style="margin-bottom: 0.5rem;">Glaubenssatz-Tagebuch</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary);">Hinterfrage deine tiefsten Lebensregeln und Glaubenssätze.</p>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary);" data-l10n="dashboard_schemas_desc">Hinterfrage deine tiefsten Lebensregeln und Glaubenssätze.</p>
                     </div>
                     <div class="glass-card interactive" onclick="app.switchTab('tiefenarbeit', 'values')">
                         <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">🎯</div>
                         <h3 data-l10n="deepwork_tab_values" style="margin-bottom: 0.5rem;">Werte-Kompass</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary);">Richte dein alltägliches Handeln an deinen wahren Werten aus.</p>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary);" data-l10n="dashboard_values_desc">Richte dein alltägliches Handeln an deinen wahren Werten aus.</p>
                     </div>
                 </div>
             </section>
@@ -541,7 +541,7 @@
                                     <label class="form-label" data-l10n="tapping_phrase_lbl" for="tapping-custom-phrase">Deine Sorge/Belastung (z. B. "Dieses Engegefühl in der Brust"):</label>
                                     <input type="text" id="tapping-custom-phrase" class="form-control" placeholder="z. B. Diese Prüfungsangst" maxlength="50">
                                 </div>
-                                <button id="start-tapping-btn" class="btn btn-accent" style="width:100%;">Klopf-Sitzung starten 🧘‍♀️</button>
+                                <button id="start-tapping-btn" class="btn btn-accent" style="width:100%;" data-l10n="tapping_start_btn">Klopf-Sitzung starten 🧘‍♀️</button>
                             </div>
 
                             <div class="tapping-session-active" id="tapping-active-ui" style="display:none; text-align:center;">
@@ -550,7 +550,7 @@
                                 </div>
                                 
                                 <div class="tapping-instruction-card">
-                                    <div class="tapping-point-badge" id="tapping-point-name">Handkante</div>
+                                    <div class="tapping-point-badge" id="tapping-point-name" data-l10n="tapping_point_sidehand">Handkante</div>
                                     <div class="tapping-phrase-display" id="tapping-phrase-text"></div>
                                 </div>
 
@@ -602,7 +602,7 @@
                             <div class="form-group">
                                 <label class="form-label" data-l10n="defusion_label" for="input-defusion-thought">Festsitzender Gedanke</label>
                                 <input type="text" id="input-defusion-thought" class="form-control" placeholder="z. B. Ich werde das nicht schaffen" maxlength="35" required>
-                                <span style="font-size:0.75rem; color:var(--text-muted); display:block; margin-top:0.25rem;">Max. 35 chars</span>
+                                <span style="font-size:0.75rem; color:var(--text-muted); display:block; margin-top:0.25rem;" data-l10n="defusion_max_chars">Max. 35 chars</span>
                             </div>
                             <button type="submit" class="btn btn-primary" style="width: 100%;" data-l10n="defusion_submit">
                                 Treiben lassen 🍃
@@ -796,15 +796,15 @@
                                 <div class="att-speaker-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center; margin-bottom: 2rem;">
                                     <div class="att-speaker left" id="att-spk-left" style="padding: 1rem; border-radius: 12px; background: rgba(255,255,255,0.02); border: 2px solid transparent; transition: all 0.3s;">
                                         <div class="spk-icon" style="font-size: 2rem; margin-bottom: 0.25rem;">🌧️</div>
-                                        <div class="spk-label" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">LINKS</div>
+                                        <div class="spk-label" data-l10n="mct_att_left" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">LINKS</div>
                                     </div>
                                     <div class="att-speaker center" id="att-spk-center" style="padding: 1rem; border-radius: 12px; background: rgba(255,255,255,0.02); border: 2px solid transparent; transition: all 0.3s;">
                                         <div class="spk-icon" style="font-size: 2rem; margin-bottom: 0.25rem;">🔔</div>
-                                        <div class="spk-label" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">MITTE</div>
+                                        <div class="spk-label" data-l10n="mct_att_center" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">MITTE</div>
                                     </div>
                                     <div class="att-speaker right" id="att-spk-right" style="padding: 1rem; border-radius: 12px; background: rgba(255,255,255,0.02); border: 2px solid transparent; transition: all 0.3s;">
                                         <div class="spk-icon" style="font-size: 2rem; margin-bottom: 0.25rem;">🍃</div>
-                                        <div class="spk-label" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">RECHTS</div>
+                                        <div class="spk-label" data-l10n="mct_att_right" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">RECHTS</div>
                                     </div>
                                 </div>
                                 <div class="att-instruction-box" style="min-height: 80px; display: flex; align-items: center; justify-content: center; text-align: center; background: rgba(255,255,255,0.01); border-radius: 12px; padding: 1rem; border: 1px solid rgba(255,255,255,0.02); margin-bottom: 1.5rem;">
@@ -1073,31 +1073,31 @@
     <div class="modal-overlay" id="experiment-modal">
         <div class="modal-card">
             <button class="btn-close-modal" id="close-experiment-modal">&times;</button>
-            <h2 class="modal-title" style="color: var(--accent-blue);">Verhaltensexperiment planen</h2>
+            <h2 class="modal-title" data-l10n="exp_new_title" style="color: var(--accent-blue);">Verhaltensexperiment planen</h2>
             
             <form id="new-experiment-form">
                 <div class="form-group">
-                    <label class="form-label" for="exp-prediction">1. Was befürchtest du genau? (Katastrophale Angst-Vorhersage)</label>
+                    <label class="form-label" for="exp-prediction" data-l10n="exp_prediction_lbl">1. Was befürchtest du genau? (Katastrophale Angst-Vorhersage)</label>
                     <textarea id="exp-prediction" class="form-control" placeholder="z. B. 'Wenn ich meine Kamera ausschalte...'" required></textarea>
                 </div>
 
                 <div class="grid-2" style="gap:1rem;">
                     <div class="form-group">
-                        <label class="form-label" for="exp-probability">Wahrscheinlichkeit (0 - 100%)</label>
+                        <label class="form-label" for="exp-probability" data-l10n="exp_probability_lbl">Wahrscheinlichkeit (0 - 100%)</label>
                         <input type="number" id="exp-probability" class="form-control" min="0" max="100" value="80" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="exp-severity">Bedrohlichkeit (1 - 10)</label>
+                        <label class="form-label" for="exp-severity" data-l10n="exp_severity_lbl">Bedrohlichkeit (1 - 10)</label>
                         <input type="number" id="exp-severity" class="form-control" min="1" max="10" value="8" required>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label class="form-label" for="exp-design">2. Wie wirst du das testen? (Das experimentelle Design)</label>
+                    <label class="form-label" for="exp-design" data-l10n="exp_design_lbl">2. Wie wirst du das testen? (Das experimentelle Design)</label>
                     <textarea id="exp-design" class="form-control" placeholder="z. B. 'Kamera für 10 Minuten ausschalten...'" required></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-accent" style="width: 100%; margin-top: 1.5rem;">
+                <button type="submit" class="btn btn-accent" style="width: 100%; margin-top: 1.5rem;" data-l10n="exp_start_btn">
                     Experiment starten & aktivieren 🧪
                 </button>
             </form>
@@ -1108,25 +1108,25 @@
     <div class="modal-overlay" id="outcome-modal">
         <div class="modal-card">
             <button class="btn-close-modal" id="close-outcome-modal">&times;</button>
-            <h2 class="modal-title" style="color: var(--accent-teal);">Experiment abschließen</h2>
+            <h2 class="modal-title" data-l10n="exp_complete_title_modal" style="color: var(--accent-teal);">Experiment abschließen</h2>
             
             <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius:12px; padding:1.25rem; margin-bottom:1.5rem;">
-                <span style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted);">Deine Befürchtung war:</span>
+                <span style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted);" data-l10n="exp_fear_was">Deine Befürchtung war:</span>
                 <p id="outcome-prediction-text" style="font-family:var(--font-serif); font-style:italic; font-size:1.1rem; margin-top:0.25rem;"></p>
             </div>
 
             <form id="outcome-experiment-form">
                 <div class="form-group">
-                    <label class="form-label" for="exp-outcome">1. Was ist tatsächlich passiert? (Ergebnis)</label>
+                    <label class="form-label" for="exp-outcome" data-l10n="exp_outcome_lbl">1. Was ist tatsächlich passiert? (Ergebnis)</label>
                     <textarea id="exp-outcome" class="form-control" placeholder="z. B. 'Nichts negatives geschah...'" required></textarea>
                 </div>
 
                 <div class="form-group">
-                    <label class="form-label" for="exp-learning">2. Was lernt dein Gehirn daraus? (Neu-Kalibrierung)</label>
+                    <label class="form-label" for="exp-learning" data-l10n="exp_learning_lbl">2. Was lernt dein Gehirn daraus? (Neu-Kalibrierung)</label>
                     <textarea id="exp-learning" class="form-control" placeholder="z. B. 'Ich bin sicher...'" required></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;" data-l10n="exp_save_btn">
                     Erkenntnisse sichern 💾
                 </button>
             </form>
@@ -1147,8 +1147,8 @@
             </div>
 
             <div style="display:flex; justify-content:space-between; align-items:center; margin-top:2.5rem; border-top:1px solid var(--border-color); padding-top:1.5rem;">
-                <button class="btn btn-secondary" id="psy-prev-btn">Zurück</button>
-                <button class="btn btn-primary" id="psy-next-btn">Weiter</button>
+                <button class="btn btn-secondary" id="psy-prev-btn" data-l10n="psy_back">Zurück</button>
+                <button class="btn btn-primary" id="psy-next-btn" data-l10n="psy_next">Weiter</button>
             </div>
         </div>
     </div>
