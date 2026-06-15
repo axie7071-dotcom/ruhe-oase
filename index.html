@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>RuheOase - Dein GAD-Begleiter zur Genesung</title>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="icon.png">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Web Audio API Synthesizer -->
+    <script src="audio-synthesizer.js" defer></script>
+    
+    <!-- App Control JS -->
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <div id="app-container">
+        
+        <!-- SIDEBAR NAVIGATION (DESKTOP) -->
+        <aside>
+            <div class="logo-container">
+                <svg class="logo-icon" viewBox="0 0 24 24">
+                    <path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.07 19.58 10.48 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z" />
+                    <circle cx="12" cy="11" r="3" />
+                </svg>
+                <span class="logo-text" data-l10n="logo">RuheOase</span>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item active" data-tab="oase">
+                    <button>
+                        <svg viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                        <span data-l10n="nav_dashboard">Oase (Dashboard)</span>
+                    </button>
+                </li>
+                <li class="nav-item" data-tab="sorgenzeit">
+                    <button>
+                        <svg viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <span data-l10n="nav_parking">Sorgen-Parkplatz</span>
+                    </button>
+                </li>
+                <li class="nav-item" data-tab="experimente">
+                    <button>
+                        <svg viewBox="0 0 24 24"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                        <span data-l10n="nav_experiments">CBT Experimente</span>
+                    </button>
+                </li>
+                <li class="nav-item" data-tab="atem">
+                    <button>
+                        <svg viewBox="0 0 24 24"><path d="M4.5 12a7.5 7.5 0 0015 0m-15 0A7.5 7.5 0 1118 4.5M4.5 12H18m0-7.5a7.5 7.5 0 00-13.5 0"/></svg>
+                        <span data-l10n="nav_breath">Atem & Vagus</span>
+                    </button>
+                </li>
+
+                <li class="nav-item" data-tab="defusion">
+                    <button>
+                        <svg viewBox="0 0 24 24"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+                        <span data-l10n="nav_defusion">Gedanken-Strom</span>
+                    </button>
+                </li>
+                <li class="nav-item" data-tab="wissen">
+                    <button>
+                        <svg viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.168.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                        <span data-l10n="nav_knowledge">Wissens-Oase</span>
+                    </button>
+                </li>
+                <li class="nav-item" data-tab="coach">
+                    <button>
+                        <svg viewBox="0 0 24 24"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                        <span data-l10n="nav_coach">Gedanken-Coach</span>
+                    </button>
+                </li>
+                <li class="nav-item" data-tab="tracker">
+                    <button>
+                        <svg viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14m-6 0a2 2 0 002 2h2a2 2 0 002-2"/></svg>
+                        <span data-l10n="nav_progress">Fortschritt (GAD-7)</span>
+                    </button>
+                </li>
+            </ul>
+
+            <div class="sidebar-footer">
+                <button class="btn-settings">
+                    <svg style="width:18px; height:18px; stroke:currentColor; fill:none; stroke-width:2" viewBox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><circle cx="12" cy="12" r="3"/></svg>
+                    <span data-l10n="nav_settings">Einstellungen</span>
+                </button>
+                <button class="btn-sos">
+                    <svg style="width:18px; height:18px; stroke:currentColor; fill:none; stroke-width:2.5" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                    <span data-l10n="nav_sos">SOS Hilfe</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- MOBILE BOTTOM NAVIGATION (SHOWN ON MOBILE) -->
+        <nav class="mobile-nav">
+            <ul class="mobile-nav-menu">
+                <li class="mobile-nav-item active" data-tab="oase">
+                    <button>
+                        <svg viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                        <span data-l10n="nav_dashboard">Oase</span>
+                    </button>
+                </li>
+                <li class="mobile-nav-item" data-tab="sorgenzeit">
+                    <button>
+                        <svg viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <span data-l10n="nav_parking">Parkplatz</span>
+                    </button>
+                </li>
+                <li class="mobile-sos-btn-wrapper">
+                    <button class="mobile-sos-btn">
+                        <svg viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                    </button>
+                </li>
+                <li class="mobile-nav-item" data-tab="atem">
+                    <button>
+                        <svg viewBox="0 0 24 24"><path d="M4.5 12a7.5 7.5 0 0015 0m-15 0A7.5 7.5 0 1118 4.5M4.5 12H18m0-7.5a7.5 7.5 0 00-13.5 0"/></svg>
+                        <span data-l10n="nav_breath">Atem</span>
+                    </button>
+                </li>
+
+                <li class="mobile-nav-item" data-tab="coach">
+                    <button>
+                        <svg viewBox="0 0 24 24"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                        <span data-l10n="nav_coach">Coach</span>
+                    </button>
+                </li>
+                <li class="mobile-nav-item" data-tab="tracker">
+                    <button>
+                        <svg viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14m-6 0a2 2 0 002 2h2a2 2 0 002-2"/></svg>
+                        <span data-l10n="nav_progress">Verlauf</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- MAIN CONTENT PANELS -->
+        <main>
+            
+            <!-- 1. DASHBOARD TAB -->
+            <section id="oase-tab" class="tab-content active">
+                <div class="page-header" style="display:flex; justify-content:space-between; align-items:flex-start;">
+                    <div>
+                        <h1 class="page-title" id="dashboard-greeting">Willkommen</h1>
+                        <p class="page-subtitle" data-l10n="subtitle">Nimm dir einen Moment Zeit, um durchzuatmen. Du bist hier in Sicherheit.</p>
+                    </div>
+                    <!-- Quick Language Select on dashboard -->
+                    <select class="form-control" id="select-language" style="width: 125px; min-height:36px; padding: 0.25rem 0.5rem; background:rgba(255,255,255,0.05); font-weight:600; border-radius:10px;">
+                        <option value="de">Deutsch 🇩🇪</option>
+                        <option value="ar">العربية 🇸🇦</option>
+                    </select>
+                </div>
+
+                <!-- Smart Advisor Card -->
+                <div class="glass-card advisor-card" style="margin-bottom: 2rem;">
+                    <div class="advisor-header">
+                        <svg class="advisor-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                        <h3 data-l10n="advisor_title" style="margin-bottom:0; color: var(--accent-lavender);">Therapie-Berater (Smart Advisor)</h3>
+                    </div>
+                    <p id="dashboard-advisor-text" data-l10n="advisor_evaluating" style="font-size:0.95rem; line-height: 1.6; color: var(--text-primary);">Analysiere...</p>
+                </div>
+
+                <div class="grid-2-1" style="margin-bottom: 2rem;">
+                    <!-- Affirmation Card -->
+                    <div class="glass-card welcome-card">
+                        <div class="welcome-card-content">
+                            <span data-l10n="daily_reminder" style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-teal); font-weight: 700;">Tägliche Genesungs-Mitteilung</span>
+                            <div class="quote-box">
+                                <p class="quote-text" id="dashboard-quote-text">Atme durch.</p>
+                                <span class="quote-author" id="dashboard-quote-author">RuheOase</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mood Logger Card -->
+                    <div class="glass-card">
+                        <h3 data-l10n="checkin_title" style="margin-bottom: 0.5rem; font-family: var(--font-heading);">Check-In</h3>
+                        <p data-l10n="checkin_sub" style="font-size: 0.85rem; color: var(--text-secondary);">Wie fühlst du dich in diesem Moment?</p>
+                        <div class="mood-selector">
+                            <button class="mood-btn" data-rating="1" title="Sehr unruhig">
+                                <span class="mood-emoji">😞</span>
+                                <span class="mood-label" data-l10n="mood_1">Sehr unruhig</span>
+                            </button>
+                            <button class="mood-btn" data-rating="2" title="Unruhig">
+                                <span class="mood-emoji">😟</span>
+                                <span class="mood-label" data-l10n="mood_2">Unruhig</span>
+                            </button>
+                            <button class="mood-btn" data-rating="3" title="Neutral">
+                                <span class="mood-emoji">😐</span>
+                                <span class="mood-label" data-l10n="mood_3">Neutral</span>
+                            </button>
+                            <button class="mood-btn" data-rating="4" title="Ruhig">
+                                <span class="mood-emoji">🙂</span>
+                                <span class="mood-label" data-l10n="mood_4">Ruhig</span>
+                            </button>
+                            <button class="mood-btn" data-rating="5" title="Sehr ruhig">
+                                <span class="mood-emoji">😌</span>
+                                <span class="mood-label" data-l10n="mood_5">Sehr ruhig</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Status Cards Grid -->
+                <div class="grid-3" style="margin-bottom: 2rem;">
+                    <div class="glass-card interactive" data-tab="sorgenzeit" onclick="app.switchTab('sorgenzeit')">
+                        <div class="sorgenzeit-widget">
+                            <div class="sorgenzeit-badge">
+                                <svg viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                            <div class="sorgenzeit-info">
+                                <h3 data-l10n="widget_parked">Sorgen-Parkplatz</h3>
+                                <p><strong id="dashboard-worry-count">0</strong> <span data-l10n="widget_parked_sub">Sorgen geparkt</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card">
+                        <div class="sorgenzeit-widget">
+                            <div class="sorgenzeit-badge" style="background: rgba(167, 139, 250, 0.1); border-color: rgba(167, 139, 250, 0.2); color: var(--accent-lavender);">
+                                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 7v5l3 3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                            <div class="sorgenzeit-info">
+                                <h3 data-l10n="widget_sorgenzeit">Nächste Sorgenzeit</h3>
+                                <p><span data-l10n="widget_sorgenzeit_sub">Täglich um</span> <strong id="dashboard-worry-time">18:00</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card interactive" data-tab="tracker" onclick="app.switchTab('tracker')">
+                        <div class="sorgenzeit-widget">
+                            <div class="sorgenzeit-badge" style="background: rgba(45, 212, 191, 0.1); border-color: rgba(45, 212, 191, 0.2); color: var(--accent-teal);">
+                                <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                            <div class="sorgenzeit-info">
+                                <h3 data-l10n="widget_progress">Genesungs-Status</h3>
+                                <div id="dashboard-gad-badge" class="severity-badge sev-minimal" style="margin-top:0.25rem;">Minimal</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick actions -->
+                <h2 data-l10n="sofothilfen_title" style="margin-bottom: 1.5rem;">Sofort-Hilfen & Übungen</h2>
+                <div class="grid-3">
+                    <div class="glass-card interactive" onclick="app.switchTab('atem')">
+                        <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">🌀</div>
+                        <h3 data-l10n="nav_breath" style="margin-bottom: 0.5rem;">Atem & Vagus</h3>
+                        <p data-l10n="card_breath_desc" style="font-size: 0.85rem; color: var(--text-secondary);"></p>
+                    </div>
+                    <div class="glass-card interactive" onclick="app.switchTab('defusion')">
+                        <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">🍃</div>
+                        <h3 data-l10n="nav_defusion" style="margin-bottom: 0.5rem;">Gedanken-Strom</h3>
+                        <p data-l10n="card_defusion_desc" style="font-size: 0.85rem; color: var(--text-secondary);"></p>
+                    </div>
+                    <div class="glass-card interactive" onclick="app.toggleModal('sos-modal', true)">
+                        <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">🚨</div>
+                        <h3 data-l10n="nav_sos" style="margin-bottom: 0.5rem;">SOS Panik-Hilfe</h3>
+                        <p data-l10n="card_sos_desc" style="font-size: 0.85rem; color: var(--text-secondary);"></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. SORGENZEIT TAB -->
+            <section id="sorgenzeit-tab" class="tab-content">
+                <div class="page-header">
+                    <h1 class="page-title" data-l10n="parking_title">Sorgen-Parkplatz & Sorgenzeit</h1>
+                    <p class="page-subtitle" data-l10n="parking_subtitle"></p>
+                </div>
+
+                <!-- 2a. Setup View -->
+                <div id="sorgenzeit-setup-view" class="worry-parking-split">
+                    <!-- Left: Form -->
+                    <div class="glass-card">
+                        <h2 data-l10n="parking_box_title" style="margin-bottom: 1.5rem; color: var(--accent-teal);">Neue Sorge parken</h2>
+                        <form id="park-worry-form">
+                            <div class="form-group">
+                                <label class="form-label" data-l10n="parking_label" for="input-worry-title">Was beschäftigt deinen Geist gerade?</label>
+                                <textarea id="input-worry-title" class="form-control" data-l10n="parking_placeholder" placeholder="Schreibe die Sorge auf." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;" data-l10n="parking_submit">
+                                Sorge sicher parken 📥
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Right: Overview & Archive -->
+                    <div>
+                        <div class="glass-card">
+                            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+                                <h2 data-l10n="parking_overview" style="color: var(--accent-gold);">Parkplatz-Übersicht</h2>
+                                <button id="start-sorgenzeit-btn" class="btn btn-warning btn-sm" data-l10n="parking_start_btn" disabled>
+                                    Sorgenzeit starten 🌅
+                                </button>
+                            </div>
+                            
+                            <div id="parked-worries-list" class="parked-list">
+                                <!-- JS Populated -->
+                            </div>
+                        </div>
+
+                        <!-- Worry Archive integrated below overview -->
+                        <div class="glass-card" style="margin-top: 2rem;">
+                            <h2 data-l10n="archive_title" style="color: var(--accent-teal); margin-bottom:0.5rem;">Sorgen-Archiv</h2>
+                            <p data-l10n="archive_desc" style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:1.5rem;"></p>
+                            <div id="resolved-worries-archive" style="max-height:250px; overflow-y:auto;">
+                                <!-- JS Populated resolved worries -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2b. Guided Wizard View -->
+                <div id="sorgenzeit-active-view" class="glass-card" style="display: none;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 1rem;">
+                        <span data-l10n="worry_time_active" style="font-family: var(--font-heading); font-weight:600; color: var(--accent-gold);">Aktive Sorgenzeit</span>
+                        <button class="btn btn-secondary btn-sm" id="sorgenzeit-cancel-btn" data-l10n="worry_time_abort">Abbrechen</button>
+                    </div>
+
+                    <div class="sorgenzeit-progress-bar">
+                        <div class="sorgenzeit-progress-fill" id="sorgenzeit-progress-fill"></div>
+                    </div>
+
+                    <div id="sorgenzeit-worry-eval-container">
+                        <!-- JS Populated evaluation layout -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. BEHAVIORAL EXPERIMENTS TAB -->
+            <section id="experimente-tab" class="tab-content">
+                <div class="page-header">
+                    <h1 class="page-title" data-l10n="exp_title">Verhaltensexperimente</h1>
+                    <p class="page-subtitle" data-l10n="exp_subtitle"></p>
+                </div>
+
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 2rem;">
+                    <h2 data-l10n="exp_active" style="color: var(--accent-blue);">Aktive Verhaltensexperimente</h2>
+                    <button class="btn btn-accent" id="btn-new-experiment" data-l10n="exp_new_btn">
+                        Neues Experiment planen 🧪
+                    </button>
+                </div>
+
+                <div class="grid-2" id="active-experiments" style="margin-bottom: 3rem;">
+                    <!-- JS Populated -->
+                </div>
+
+                <h2 data-l10n="exp_completed_title" style="margin-bottom: 1.5rem; color: var(--text-secondary);">Abgeschlossene Lektionen</h2>
+                <div id="completed-experiments">
+                    <!-- JS Populated -->
+                </div>
+            </section>
+
+            <!-- 4. ATEM & VAGUS TAB -->
+            <section id="atem-tab" class="tab-content">
+                <div class="page-header">
+                    <h1 class="page-title" data-l10n="breath_title">Atem-Kohärenz & Vagus-Bremse</h1>
+                    <p class="page-subtitle" data-l10n="breath_subtitle"></p>
+                </div>
+
+                <div class="grid-2-1">
+                    <!-- Left: Breathing Trainer -->
+                    <div class="glass-card breathing-module">
+                        <div class="breathing-circle-container">
+                            <div class="breathing-outer-ring"></div>
+                            <div class="breathing-pulse-bg" id="breath-pulse-bg"></div>
+                            <div class="breathing-circle" id="breath-circle">
+                                <span class="breathing-text" id="breath-text" data-l10n="breath_ready">Bereit</span>
+                            </div>
+                            <div class="breathing-timer" id="breath-timer-count">00:00</div>
+                        </div>
+
+                        <!-- Settings & Play -->
+                        <div class="grid-2" style="width:100%; max-width:450px; gap: 1rem; margin-bottom: 2rem;">
+                            <div>
+                                <label class="form-label" data-l10n="breath_pattern_lbl">Atem-Muster</label>
+                                <select class="form-control" id="breathing-pattern">
+                                    <option value="resonant">Resonanz (5s / 5s) - HRV Coherence</option>
+                                    <option value="box">Box (4s / 4s / 4s / 4s) - Fokus</option>
+                                    <option value="calm">Entspannung (4s / 7s / 8s) - Vagus</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="form-label" data-l10n="breath_duration_lbl">Sitzungsdauer</label>
+                                <select class="form-control" id="breathing-duration">
+                                    <option value="2">2 min</option>
+                                    <option value="5" selected>5 min</option>
+                                    <option value="10">10 min</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="coherence-meter-container">
+                            <div class="coherence-label">
+                                <span data-l10n="breath_coherence_lbl">Physiologische Kohärenz</span>
+                                <span id="breath-coherence-val">0%</span>
+                            </div>
+                            <div class="coherence-bar-bg">
+                                <div class="coherence-bar-fill" id="breath-coherence-fill"></div>
+                            </div>
+                        </div>
+
+                        <div class="breathing-audio-toggle">
+                            <label class="form-label" data-l10n="breath_sound_lbl" style="margin-bottom:0; cursor:pointer;" for="breathing-sound-toggle">Audio-Führung</label>
+                            <input type="checkbox" id="breathing-sound-toggle" style="width:20px; height:20px; cursor:pointer;">
+                        </div>
+
+                        <button id="start-breathing-btn" class="btn btn-primary" style="margin-top: 2rem; width:100%; max-width:280px;" data-l10n="breath_start_btn">
+                            Sitzung starten
+                        </button>
+                    </div>
+
+                    <!-- Right: Somatic Guides -->
+                    <div class="glass-card" id="somatic-exercises-card">
+                        <h2 data-l10n="somatic_title" style="margin-bottom: 1.5rem; color: var(--accent-lavender);">Körper-Anker (Somatic)</h2>
+                        <p data-l10n="somatic_subtitle" style="font-size:0.9rem; color:var(--text-secondary); margin-bottom: 1.5rem;"></p>
+
+                        <div class="form-group">
+                            <label class="form-label" data-l10n="somatic_select_lbl">Wähle eine Somatische Übung:</label>
+                            <select class="form-control" id="somatic-exercise-select" onchange="document.querySelectorAll('.somatic-card').forEach(c => c.classList.remove('active')); document.getElementById(this.value).classList.add('active');">
+                                <option value="somatic-vagus" data-l10n="somatic_vagus_opt">Vagus-Augen-Shifting (Blick-Entlastung)</option>
+                                <option value="somatic-sigh" data-l10n="somatic_sigh_opt">Physiologischer Seufzer (Lungenbelüftung)</option>
+                                <option value="somatic-grounding" data-l10n="somatic_grounding_opt">5-4-3-2-1 Physische Erdung</option>
+                                <option value="somatic-tapping" data-l10n="somatic_tapping_opt">EFT Meridian-Klopfen</option>
+                            </select>
+                        </div>
+
+                        <!-- 1. Vagus Shifting -->
+                        <div id="somatic-vagus" class="somatic-card active">
+                            <div class="somatic-visual-guide" style="position:relative; overflow:hidden;">
+                                <div class="vagus-dot" style="width: 24px; height: 24px; border-radius:50%; background:var(--accent-lavender); position:absolute; transition: transform 0.03s linear;"></div>
+                            </div>
+                            <h3 data-l10n="vagus_title">Vagus-Blick-Entlastung</h3>
+                            <p style="font-size: 0.9rem; margin-top:0.5rem; color:var(--text-secondary)" data-l10n="vagus_desc"></p>
+                            <button id="start-vagus-btn" class="btn btn-secondary" style="margin-top: 1.5rem; width:100%;" data-l10n="vagus_start"></button>
+                        </div>
+
+                        <!-- 2. Sighing -->
+                        <div id="somatic-sigh" class="somatic-card">
+                            <div class="somatic-visual-guide" style="flex-direction:column; padding: 1.5rem;">
+                                <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">😮💨</div>
+                                <div style="font-weight:700; color:var(--accent-teal)" data-l10n="sigh_title">Physiologischer Seufzer</div>
+                            </div>
+                            <h3 data-l10n="sigh_title">Physiologischer Seufzer</h3>
+                            <p style="font-size: 0.9rem; margin-top:0.5rem; color:var(--text-secondary)" data-l10n="sigh_desc"></p>
+                        </div>
+
+                        <!-- 3. Grounding -->
+                        <div id="somatic-grounding" class="somatic-card">
+                            <h3 data-l10n="grounding_title" style="margin-bottom:1rem;">Sensorische Erdung</h3>
+                            <p data-l10n="grounding_desc" style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:1rem;"></p>
+                            
+                            <label class="form-label" data-l10n="grounding_see"></label>
+                            <div class="grounding-interactive-grid">
+                                <button class="grounding-item-btn" data-l10n="grounding_btn_see">Sehen</button>
+                                <button class="grounding-item-btn" data-l10n="grounding_btn_see">Sehen</button>
+                                <button class="grounding-item-btn" data-l10n="grounding_btn_see">Sehen</button>
+                                <button class="grounding-item-btn" data-l10n="grounding_btn_see">Sehen</button>
+                                <button class="grounding-item-btn" data-l10n="grounding_btn_see">Sehen</button>
+                            </div>
+
+                            <label class="form-label" data-l10n="grounding_feel"></label>
+                            <div class="grounding-interactive-grid">
+                                <button class="grounding-item-btn" data-l10n="grounding_btn_feel">Fühlen</button>
+                                <button class="grounding-item-btn" data-l10n="grounding_btn_feel">Fühlen</button>
+                                <button class="grounding-item-btn" data-l10n="grounding_btn_feel">Fühlen</button>
+                                <button class="grounding-item-btn" data-l10n="grounding_btn_feel">Fühlen</button>
+                            </div>
+
+                            <label class="form-label" data-l10n="grounding_hear"></label>
+                            <div class="grounding-interactive-grid">
+                                <button class="grounding-item-btn" data-l10n="grounding_btn_hear">Hören</button>
+                                <button class="grounding-item-btn" data-l10n="grounding_btn_hear">Hören</button>
+                                <button class="grounding-item-btn" data-l10n="grounding_btn_hear">Hören</button>
+                            </div>
+
+                            <label class="form-label" data-l10n="grounding_smell"></label>
+                            <div class="grounding-interactive-grid">
+                                <button class="grounding-item-btn" data-l10n="grounding_btn_smell">Riechen</button>
+                                <button class="grounding-item-btn" data-l10n="grounding_btn_smell">Riechen</button>
+                            </div>
+
+                            <label class="form-label" data-l10n="grounding_taste"></label>
+                            <div class="grounding-interactive-grid" style="grid-template-columns: 1fr;">
+                                <button class="grounding-item-btn" data-l10n="grounding_btn_taste">Schmecken</button>
+                            </div>
+                        </div>
+
+                        <!-- 4. EFT Tapping -->
+                        <div id="somatic-tapping" class="somatic-card">
+                            <h3 data-l10n="tapping_title" style="margin-bottom:0.5rem;">EFT Meridian-Klopfen</h3>
+                            <p data-l10n="tapping_desc" style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:1.5rem;"></p>
+                            
+                            <div class="tapping-session-setup" id="tapping-setup-ui">
+                                <div class="form-group">
+                                    <label class="form-label" data-l10n="tapping_phrase_lbl" for="tapping-custom-phrase">Deine Sorge/Belastung (z. B. "Dieses Engegefühl in der Brust"):</label>
+                                    <input type="text" id="tapping-custom-phrase" class="form-control" placeholder="z. B. Diese Prüfungsangst" maxlength="50">
+                                </div>
+                                <button id="start-tapping-btn" class="btn btn-accent" style="width:100%;">Klopf-Sitzung starten 🧘‍♀️</button>
+                            </div>
+
+                            <div class="tapping-session-active" id="tapping-active-ui" style="display:none; text-align:center;">
+                                <div class="tapping-progress-bar-container">
+                                    <div class="tapping-progress-bar-fill" id="tapping-progress-fill"></div>
+                                </div>
+                                
+                                <div class="tapping-instruction-card">
+                                    <div class="tapping-point-badge" id="tapping-point-name">Handkante</div>
+                                    <div class="tapping-phrase-display" id="tapping-phrase-text"></div>
+                                </div>
+
+                                <div class="tapping-pad-wrapper">
+                                    <div class="tapping-pulse-ring"></div>
+                                    <button class="tapping-pad-btn" id="tapping-pad-button">
+                                        <span class="tapping-pad-label" data-l10n="tapping_pad_lbl">Tippen</span>
+                                        <span class="tapping-pad-count" id="tapping-pad-counter">7</span>
+                                    </button>
+                                </div>
+
+                                <button id="stop-tapping-btn" class="btn btn-secondary" style="margin-top:1.5rem; width:100%;" data-l10n="tapping_stop_btn">Abbrechen</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- 5. GEDANKEN-STROM TAB -->
+            <section id="defusion-tab" class="tab-content">
+                <div class="page-header">
+                    <h1 class="page-title" data-l10n="defusion_title">Gedanken-Strom (ACT Defusion)</h1>
+                    <p class="page-subtitle" data-l10n="defusion_subtitle"></p>
+                </div>
+
+                <div class="grid-2-1">
+                    <!-- Left: Canvas -->
+                    <div id="defusion-canvas-container">
+                        <canvas id="defusion-canvas"></canvas>
+                    </div>
+
+                    <!-- Right: Input -->
+                    <div class="glass-card">
+                        <h2 data-l10n="defusion_box_title" style="margin-bottom: 1rem; color: var(--accent-teal);">Gedanken entlassen</h2>
+                        <p data-l10n="defusion_box_desc" style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem;"></p>
+                        
+                        <form id="defusion-form">
+                            <!-- Scenario Theme selector inside controls -->
+                            <div class="form-group">
+                                <label class="form-label" data-l10n="defusion_theme_lbl" for="select-defusion-theme">Szenario auswählen:</label>
+                                <select class="form-control" id="select-defusion-theme">
+                                    <option value="river" data-l10n="defusion_theme_river">Waldfluss 🍃</option>
+                                    <option value="space" data-l10n="defusion_theme_space">Weltall 🌠</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" data-l10n="defusion_label" for="input-defusion-thought">Festsitzender Gedanke</label>
+                                <input type="text" id="input-defusion-thought" class="form-control" placeholder="z. B. Ich werde das nicht schaffen" maxlength="35" required>
+                                <span style="font-size:0.75rem; color:var(--text-muted); display:block; margin-top:0.25rem;">Max. 35 chars</span>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;" data-l10n="defusion_submit">
+                                Treiben lassen 🍃
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. WISSSENS-OASE TAB -->
+            <section id="wissen-tab" class="tab-content">
+                <div class="page-header">
+                    <h1 class="page-title" data-l10n="knowledge_title">Wissens-Oase</h1>
+                    <p class="page-subtitle" data-l10n="knowledge_subtitle"></p>
+                </div>
+
+                <div class="module-cards-grid">
+                    <div class="glass-card module-card">
+                        <div class="module-card-body">
+                            <span class="module-tag tag-blue">CBT 1</span>
+                            <h3 data-l10n="mod1_title">Modul 1: Was ist GAD?</h3>
+                            <p data-l10n="mod1_desc"></p>
+                        </div>
+                        <button class="btn btn-secondary btn-read-module" data-module="0" data-l10n="mod_read_btn" style="width:100%;"></button>
+                    </div>
+                    <div class="glass-card module-card">
+                        <div class="module-card-body">
+                            <span class="module-tag tag-lavender">CBT 2</span>
+                            <h3 data-l10n="mod2_title">Modul 2: Die Sorgen-Falle</h3>
+                            <p data-l10n="mod2_desc"></p>
+                        </div>
+                        <button class="btn btn-secondary btn-read-module" data-module="1" data-l10n="mod_read_btn" style="width:100%;"></button>
+                    </div>
+                    <div class="glass-card module-card">
+                        <div class="module-card-body">
+                            <span class="module-tag tag-teal" style="background: rgba(45, 212, 191, 0.1); border: 1px solid rgba(45, 212, 191, 0.2); color: var(--accent-teal);">Physio 1</span>
+                            <h3 data-l10n="mod3_title">Modul 3: Der Vagusnerv</h3>
+                            <p data-l10n="mod3_desc"></p>
+                        </div>
+                        <button class="btn btn-secondary btn-read-module" data-module="2" data-l10n="mod_read_btn" style="width:100%;"></button>
+                    </div>
+                    <div class="glass-card module-card">
+                        <div class="module-card-body">
+                            <span class="module-tag tag-gold">Physio 2</span>
+                            <h3 data-l10n="mod4_title">Modul 4: Rückfall-Prävention</h3>
+                            <p data-l10n="mod4_desc"></p>
+                        </div>
+                        <button class="btn btn-secondary btn-read-module" data-module="3" data-l10n="mod_read_btn" style="width:100%;"></button>
+                    </div>
+                    <div class="glass-card module-card">
+                        <div class="module-card-body">
+                            <span class="module-tag tag-lavender">CBT 3</span>
+                            <h3 data-l10n="mod5_title">Modul 5: Kognitive Arbeit</h3>
+                            <p data-l10n="mod5_desc"></p>
+                        </div>
+                        <button class="btn btn-secondary btn-read-module" data-module="4" data-l10n="mod_read_btn" style="width:100%;"></button>
+                    </div>
+                    <div class="glass-card module-card">
+                        <div class="module-card-body">
+                            <span class="module-tag tag-blue">Hilfe 1</span>
+                            <h3 data-l10n="mod6_title">Modul 6: Anderen helfen</h3>
+                            <p data-l10n="mod6_desc"></p>
+                        </div>
+                        <button class="btn btn-secondary btn-read-module" data-module="5" data-l10n="mod_read_btn" style="width:100%;"></button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. TRACKER TAB -->
+            <section id="tracker-tab" class="tab-content">
+                <div class="page-header">
+                    <h1 class="page-title" data-l10n="tracker_title">Genesungs-Tracker & Diagnostik</h1>
+                    <p class="page-subtitle" data-l10n="tracker_subtitle"></p>
+                </div>
+
+                <div class="clinical-grid">
+                    <!-- Left: Chart -->
+                    <div class="glass-card">
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 2rem;">
+                            <h2 data-l10n="tracker_chart_title" style="color:var(--accent-blue);">Wöchentliche GAD-7 Auswertung</h2>
+                            <button id="start-gad-btn" class="btn btn-accent" data-l10n="tracker_btn">
+                                GAD-7 Test starten 📋
+                            </button>
+                        </div>
+
+                        <!-- Chart bars -->
+                        <div class="gad-chart-container" id="gad-chart-bars">
+                            <!-- JS Populated -->
+                        </div>
+
+                        <div style="display: flex; gap: 2rem; font-size: 0.8rem; color: var(--text-muted); justify-content: center; margin-top: 1rem;">
+                            <span>🟢 0-4</span>
+                            <span>🟡 5-9</span>
+                            <span>🟠 10-14</span>
+                            <span>🔴 15-21</span>
+                        </div>
+
+                        <!-- Dynamic Trend analysis output -->
+                        <div id="gad-trend-analysis" style="font-size: 0.95rem; font-weight: 500; text-align: center; margin-top: 1.5rem; padding: 1.25rem; border-radius: 12px; background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); line-height: 1.5;">
+                            <!-- JS calculated message -->
+                        </div>
+                    </div>
+
+                    <!-- Right: History List -->
+                    <div class="glass-card">
+                        <h2 data-l10n="tracker_history_title" style="margin-bottom:1.5rem; color:var(--text-secondary);">Test-Historie</h2>
+                        <div id="gad-history-list" style="max-height: 350px; overflow-y: auto;">
+                            <!-- JS Populated -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. CBT COACH TAB -->
+            <section id="coach-tab" class="tab-content">
+                <div class="page-header">
+                    <h1 class="page-title" data-l10n="coach_title">Gedanken-Coach (CBT Restrukturierung)</h1>
+                    <p class="page-subtitle" data-l10n="coach_subtitle">Hinterfrage automatische Gedanken im Sokratischen Dialog.</p>
+                </div>
+
+                <div class="grid-2-1">
+                    <!-- Left: Socratic Chat -->
+                    <div class="glass-card chat-wrapper" style="display:flex; flex-direction:column; height: 500px; justify-content:space-between; padding:0; overflow:hidden;">
+                        <!-- Chat header -->
+                        <div class="chat-header">
+                            <div class="chat-avatar">🤖</div>
+                            <div class="chat-meta">
+                                <span class="chat-name" data-l10n="coach_name">Oasen-Begleiter</span>
+                                <span class="chat-status" data-l10n="coach_status_online">Hilft dir beim Gedanken-Hinterfragen</span>
+                            </div>
+                        </div>
+
+                        <!-- Messages stream -->
+                        <div class="chat-messages" id="coach-chat-messages">
+                            <!-- JS populated -->
+                        </div>
+
+                        <!-- Chat input/control area -->
+                        <div class="chat-input-area" id="coach-input-area">
+                            <form id="coach-chat-form" style="display:flex; gap:0.5rem; width:100%;">
+                                <input type="text" id="coach-chat-input" class="form-control" placeholder="Schreibe dem Begleiter..." autocomplete="off" required>
+                                <button type="submit" class="btn btn-primary" style="padding:0.75rem 1.5rem;" data-l10n="coach_send_btn">Senden</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Right: Reframed Thoughts Archive -->
+                    <div class="glass-card" style="display:flex; flex-direction:column; justify-content:space-between; height: 500px; overflow-y:auto;">
+                        <div>
+                            <h2 data-l10n="coach_archive_title" style="margin-bottom: 1rem; color: var(--accent-gold);">Umformulierte Gedanken</h2>
+                            <p data-l10n="coach_archive_desc" style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1.5rem;">Hier siehst du deine befreiten, ausgewogenen Sichtweisen als Schutzschild gegen Angst.</p>
+                            
+                            <div id="coach-reframed-list" style="display:flex; flex-direction:column; gap:1rem;">
+                                <!-- JS populated -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- ==========================================================================
+         MODALS & OVERLAYS
+         ========================================================================== -->
+
+    <!-- A. SETTINGS MODAL -->
+    <div class="modal-overlay" id="settings-modal">
+        <div class="modal-card">
+            <button class="btn-close-modal" id="close-settings-modal">&times;</button>
+            <h2 class="modal-title" data-l10n="settings_title" style="color: var(--accent-teal);">Einstellungen</h2>
+            
+            <div class="form-group">
+                <label class="form-label" data-l10n="settings_worry_lbl" for="input-worry-time">Uhrzeit für deine tägliche Sorgenzeit:</label>
+                <input type="time" id="input-worry-time" class="form-control" value="18:00">
+                <span data-l10n="settings_worry_sub" style="font-size:0.75rem; color:var(--text-muted); display:block; margin-top:0.25rem;">Plane täglich 15 Minuten ein.</span>
+            </div>
+
+            <h3 data-l10n="settings_mixer_title" style="margin: 1.5rem 0 1rem 0; font-family: var(--font-heading); color: var(--text-secondary);">Klang-Mixer</h3>
+            
+            <div class="form-group">
+                <label class="form-label" data-l10n="settings_rain_lbl">Regen-Prasseln</label>
+                <div class="slider-container">
+                    <input type="range" class="range-slider" id="volume-rain" min="0" max="100" value="0">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" data-l10n="settings_waves_lbl">Meeresrauschen</label>
+                <div class="slider-container">
+                    <input type="range" class="range-slider" id="volume-waves" min="0" max="100" value="0">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" data-l10n="settings_wind_lbl">Waldwind</label>
+                <div class="slider-container">
+                    <input type="range" class="range-slider" id="volume-wind" min="0" max="100" value="0">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" data-l10n="settings_chimes_lbl">Windspiele 🔔</label>
+                <div class="slider-container">
+                    <input type="range" class="range-slider" id="volume-chimes" min="0" max="100" value="0">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" data-l10n="settings_brown_lbl">Braunes Rauschen</label>
+                <div class="slider-container">
+                    <input type="range" class="range-slider" id="volume-brown" min="0" max="100" value="0">
+                </div>
+            </div>
+
+            <!-- Therapeuten-Export button -->
+            <button class="btn btn-secondary" id="export-app-data" data-l10n="settings_export_btn" style="width: 100%; margin-top: 1rem; border-color: var(--accent-blue); color: var(--accent-blue);">
+                Therapeuten-Export (JSON) 📤
+            </button>
+
+            <div style="margin-top: 2rem; display:flex; gap: 1rem;">
+                <button class="btn btn-primary" id="save-settings" data-l10n="settings_save_btn" style="flex:1;">Speichern</button>
+                <button class="btn btn-secondary" id="reset-app-data" data-l10n="settings_reset_btn" style="border-color:var(--danger); color:var(--danger)">Daten löschen</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- B. SOS EMERGENCY OVERLAY -->
+    <div class="modal-overlay sos-overlay" id="sos-modal">
+        <div class="modal-card sos-card">
+            <button class="btn-close-modal" id="close-sos-modal">&times;</button>
+            <div class="sos-title" data-l10n="sos_title">NOTFALL & ERDUNG</div>
+            <p class="sos-subtitle" data-l10n="sos_subtitle"></p>
+
+            <div class="glass-card" style="background:rgba(244, 63, 94, 0.04); border-color:rgba(244, 63, 94, 0.2); margin-bottom:1.5rem; padding: 1.5rem; text-align: start;">
+                <h3 data-l10n="sos_vagus_title" style="color:var(--danger); margin-bottom:0.5rem;">Der Doppelseufzer</h3>
+                <p style="font-size:0.9rem;" data-l10n="sos_vagus_desc"></p>
+            </div>
+
+            <button class="btn btn-warning" id="sos-breath-shortcut" onclick="app.toggleModal('sos-modal', false); app.switchTab('atem');" style="width: 100%; margin-bottom: 2rem;" data-l10n="sos_breath_btn">
+                Geführte Atem-Kohärenz starten 🌀
+            </button>
+
+            <h3 data-l10n="sos_helplines_title" style="text-align: start; margin-bottom:0.75rem;">Krisen-Telefonnummern</h3>
+            <div class="sos-helplines-list">
+                <div class="helpline-item">
+                    <span class="helpline-name" data-l10n="sos_helpline_1">Telefonseelsorge</span>
+                    <a href="tel:08001110111" class="helpline-number">0800 111 0 111</a>
+                </div>
+                <div class="helpline-item">
+                    <span class="helpline-name" data-l10n="sos_helpline_2">Nummer gegen Kummer</span>
+                    <a href="tel:116111" class="helpline-number">116 111</a>
+                </div>
+                <div class="helpline-item">
+                    <span class="helpline-name" data-l10n="sos_helpline_3">Info-Telefon Depression</span>
+                    <a href="tel:08003344533" class="helpline-number">0800 33 44 533</a>
+                </div>
+                <div class="helpline-item">
+                    <span class="helpline-name" data-l10n="sos_helpline_4">Medizinischer Notdienst</span>
+                    <a href="tel:112" class="helpline-number" style="color:var(--danger)">112</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- C. NEW BEHAVIORAL EXPERIMENT MODAL -->
+    <div class="modal-overlay" id="experiment-modal">
+        <div class="modal-card">
+            <button class="btn-close-modal" id="close-experiment-modal">&times;</button>
+            <h2 class="modal-title" style="color: var(--accent-blue);">Verhaltensexperiment planen</h2>
+            
+            <form id="new-experiment-form">
+                <div class="form-group">
+                    <label class="form-label" for="exp-prediction">1. Was befürchtest du genau? (Katastrophale Angst-Vorhersage)</label>
+                    <textarea id="exp-prediction" class="form-control" placeholder="z. B. 'Wenn ich meine Kamera ausschalte...'" required></textarea>
+                </div>
+
+                <div class="grid-2" style="gap:1rem;">
+                    <div class="form-group">
+                        <label class="form-label" for="exp-probability">Wahrscheinlichkeit (0 - 100%)</label>
+                        <input type="number" id="exp-probability" class="form-control" min="0" max="100" value="80" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="exp-severity">Bedrohlichkeit (1 - 10)</label>
+                        <input type="number" id="exp-severity" class="form-control" min="1" max="10" value="8" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="exp-design">2. Wie wirst du das testen? (Das experimentelle Design)</label>
+                    <textarea id="exp-design" class="form-control" placeholder="z. B. 'Kamera für 10 Minuten ausschalten...'" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-accent" style="width: 100%; margin-top: 1.5rem;">
+                    Experiment starten & aktivieren 🧪
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- D. EXPERIMENT OUTCOME LOG MODAL -->
+    <div class="modal-overlay" id="outcome-modal">
+        <div class="modal-card">
+            <button class="btn-close-modal" id="close-outcome-modal">&times;</button>
+            <h2 class="modal-title" style="color: var(--accent-teal);">Experiment abschließen</h2>
+            
+            <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius:12px; padding:1.25rem; margin-bottom:1.5rem;">
+                <span style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted);">Deine Befürchtung war:</span>
+                <p id="outcome-prediction-text" style="font-family:var(--font-serif); font-style:italic; font-size:1.1rem; margin-top:0.25rem;"></p>
+            </div>
+
+            <form id="outcome-experiment-form">
+                <div class="form-group">
+                    <label class="form-label" for="exp-outcome">1. Was ist tatsächlich passiert? (Ergebnis)</label>
+                    <textarea id="exp-outcome" class="form-control" placeholder="z. B. 'Nichts negatives geschah...'" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="exp-learning">2. Was lernt dein Gehirn daraus? (Neu-Kalibrierung)</label>
+                    <textarea id="exp-learning" class="form-control" placeholder="z. B. 'Ich bin sicher...'" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">
+                    Erkenntnisse sichern 💾
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- E. PSYCHOEDUCATION READER MODAL -->
+    <div class="psycho-reader-modal" id="psycho-reader-modal">
+        <div class="psycho-reader-container">
+            <button class="btn-close-reader" id="close-psy-reader">&times;</button>
+            
+            <div class="psycho-reader-progress" id="psycho-reader-dots">
+                <!-- JS populated -->
+            </div>
+
+            <div id="psycho-reader-slide-container">
+                <!-- JS populated slides -->
+            </div>
+
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:2.5rem; border-top:1px solid var(--border-color); padding-top:1.5rem;">
+                <button class="btn btn-secondary" id="psy-prev-btn">Zurück</button>
+                <button class="btn btn-primary" id="psy-next-btn">Weiter</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- F. CLINICAL GAD-7 QUESTIONNAIRE MODAL -->
+    <div class="modal-overlay" id="gad-modal">
+        <div class="modal-card" style="max-width: 750px;">
+            <button class="btn-close-modal" id="close-gad-modal">&times;</button>
+            <h2 class="modal-title" data-l10n="gad_title" style="color:var(--accent-blue);">Klinischer GAD-7 Fragebogen</h2>
+            <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom: 2rem;" data-l10n="gad_subtitle">
+                Wie oft fühltest du dich in den **letzten zwei Wochen** durch die folgenden Beschwerden beeinträchtigt?
+            </p>
+
+            <form id="gad-form">
+                
+                <!-- Q1 -->
+                <div class="gad-question-card">
+                    <div class="gad-question-text" data-l10n="gad_q1">1. Gefühle von Nervosität, Angst oder Anspannung</div>
+                    <div class="gad-answers-grid">
+                        <button type="button" class="gad-answer-btn" data-question="1" data-score="0" data-l10n="gad_a0" onclick="app.selectGadAnswer(1,0)">Überhaupt nicht (0)</button>
+                        <button type="button" class="gad-answer-btn" data-question="1" data-score="1" data-l10n="gad_a1" onclick="app.selectGadAnswer(1,1)">An einzelnen Tagen (1)</button>
+                        <button type="button" class="gad-answer-btn" data-question="1" data-score="2" data-l10n="gad_a2" onclick="app.selectGadAnswer(1,2)">An mehr als der Hälfte der Tage (2)</button>
+                        <button type="button" class="gad-answer-btn" data-question="1" data-score="3" data-l10n="gad_a3" onclick="app.selectGadAnswer(1,3)">Beinahe jeden Tag (3)</button>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="gad-question-card">
+                    <div class="gad-question-text" data-l10n="gad_q2">2. Unfähigkeit, Sorgen zu stoppen oder zu kontrollieren</div>
+                    <div class="gad-answers-grid">
+                        <button type="button" class="gad-answer-btn" data-question="2" data-score="0" data-l10n="gad_a0" onclick="app.selectGadAnswer(2,0)">Überhaupt nicht (0)</button>
+                        <button type="button" class="gad-answer-btn" data-question="2" data-score="1" data-l10n="gad_a1" onclick="app.selectGadAnswer(2,1)">An einzelnen Tagen (1)</button>
+                        <button type="button" class="gad-answer-btn" data-question="2" data-score="2" data-l10n="gad_a2" onclick="app.selectGadAnswer(2,2)">An mehr als der Hälfte der Tage (2)</button>
+                        <button type="button" class="gad-answer-btn" data-question="2" data-score="3" data-l10n="gad_a3" onclick="app.selectGadAnswer(2,3)">Beinahe jeden Tag (3)</button>
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="gad-question-card">
+                    <div class="gad-question-text" data-l10n="gad_q3">3. Übermäßige Sorgen über verschiedene Dinge</div>
+                    <div class="gad-answers-grid">
+                        <button type="button" class="gad-answer-btn" data-question="3" data-score="0" data-l10n="gad_a0" onclick="app.selectGadAnswer(3,0)">Überhaupt nicht (0)</button>
+                        <button type="button" class="gad-answer-btn" data-question="3" data-score="1" data-l10n="gad_a1" onclick="app.selectGadAnswer(3,1)">An einzelnen Tagen (1)</button>
+                        <button type="button" class="gad-answer-btn" data-question="3" data-score="2" data-l10n="gad_a2" onclick="app.selectGadAnswer(3,2)">An mehr als der Hälfte der Tage (2)</button>
+                        <button type="button" class="gad-answer-btn" data-question="3" data-score="3" data-l10n="gad_a3" onclick="app.selectGadAnswer(3,3)">Beinahe jeden Tag (3)</button>
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="gad-question-card">
+                    <div class="gad-question-text" data-l10n="gad_q4">4. Schwierigkeiten, sich zu entspannen</div>
+                    <div class="gad-answers-grid">
+                        <button type="button" class="gad-answer-btn" data-question="4" data-score="0" data-l10n="gad_a0" onclick="app.selectGadAnswer(4,0)">Überhaupt nicht (0)</button>
+                        <button type="button" class="gad-answer-btn" data-question="4" data-score="1" data-l10n="gad_a1" onclick="app.selectGadAnswer(4,1)">An einzelnen Tagen (1)</button>
+                        <button type="button" class="gad-answer-btn" data-question="4" data-score="2" data-l10n="gad_a2" onclick="app.selectGadAnswer(4,2)">An mehr als der Hälfte der Tage (2)</button>
+                        <button type="button" class="gad-answer-btn" data-question="4" data-score="3" data-l10n="gad_a3" onclick="app.selectGadAnswer(4,3)">Beinahe jeden Tag (3)</button>
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="gad-question-card">
+                    <div class="gad-question-text" data-l10n="gad_q5">5. Rastlosigkeit, Unruhe (so stark, dass es schwerfällt, stillzusitzen)</div>
+                    <div class="gad-answers-grid">
+                        <button type="button" class="gad-answer-btn" data-question="5" data-score="0" data-l10n="gad_a0" onclick="app.selectGadAnswer(5,0)">Überhaupt nicht (0)</button>
+                        <button type="button" class="gad-answer-btn" data-question="5" data-score="1" data-l10n="gad_a1" onclick="app.selectGadAnswer(5,1)">An einzelnen Tagen (1)</button>
+                        <button type="button" class="gad-answer-btn" data-question="5" data-score="2" data-l10n="gad_a2" onclick="app.selectGadAnswer(5,2)">An mehr als der Hälfte der Tage (2)</button>
+                        <button type="button" class="gad-answer-btn" data-question="5" data-score="3" data-l10n="gad_a3" onclick="app.selectGadAnswer(5,3)">Beinahe jeden Tag (3)</button>
+                    </div>
+                </div>
+
+                <!-- Q6 -->
+                <div class="gad-question-card">
+                    <div class="gad-question-text" data-l10n="gad_q6">6. Schnelle Verärgerung oder Reizbarkeit</div>
+                    <div class="gad-answers-grid">
+                        <button type="button" class="gad-answer-btn" data-question="6" data-score="0" data-l10n="gad_a0" onclick="app.selectGadAnswer(6,0)">Überhaupt nicht (0)</button>
+                        <button type="button" class="gad-answer-btn" data-question="6" data-score="1" data-l10n="gad_a1" onclick="app.selectGadAnswer(6,1)">An einzelnen Tagen (1)</button>
+                        <button type="button" class="gad-answer-btn" data-question="6" data-score="2" data-l10n="gad_a2" onclick="app.selectGadAnswer(6,2)">An mehr als der Hälfte der Tage (2)</button>
+                        <button type="button" class="gad-answer-btn" data-question="6" data-score="3" data-l10n="gad_a3" onclick="app.selectGadAnswer(6,3)">Beinahe jeden Tag (3)</button>
+                    </div>
+                </div>
+
+                <!-- Q7 -->
+                <div class="gad-question-card">
+                    <div class="gad-question-text" data-l10n="gad_q7">7. Gefühle von Angst, als ob etwas Schreckliches passieren könnte</div>
+                    <div class="gad-answers-grid">
+                        <button type="button" class="gad-answer-btn" data-question="7" data-score="0" data-l10n="gad_a0" onclick="app.selectGadAnswer(7,0)">Überhaupt nicht (0)</button>
+                        <button type="button" class="gad-answer-btn" data-question="7" data-score="1" data-l10n="gad_a1" onclick="app.selectGadAnswer(7,1)">An einzelnen Tagen (1)</button>
+                        <button type="button" class="gad-answer-btn" data-question="7" data-score="2" data-l10n="gad_a2" onclick="app.selectGadAnswer(7,2)">An mehr als der Hälfte der Tage (2)</button>
+                        <button type="button" class="gad-answer-btn" data-question="7" data-score="3" data-l10n="gad_a3" onclick="app.selectGadAnswer(7,3)">Beinahe jeden Tag (3)</button>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 2rem;" data-l10n="gad_btn_submit">
+                    Ergebnisse auswerten & speichern 📊
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
