@@ -543,6 +543,180 @@ class AudioSynthesizer {
         modulator.stop(now + duration + 0.1);
     }
 
+    // === SPATIAL AUDIO FOR ATTENTION TRAINING TECHNIQUE (ATT) ===
+    startSpatialRain(panValue = -1.0, volume = 0.3) {
+        this.resumeContext();
+        if (this.sources.spatialRain) return;
+
+        const rainSource = this.ctx.createBufferSource();
+        rainSource.buffer = this.createNoiseBuffer('pink');
+        rainSource.loop = true;
+
+        const rainFilter = this.ctx.createBiquadFilter();
+        rainFilter.type = 'bandpass';
+        rainFilter.frequency.value = 1000;
+        rainFilter.Q.value = 1.0;
+
+        const rainGain = this.ctx.createGain();
+        rainGain.gain.value = 0.0;
+
+        const panner = this.ctx.createStereoPanner();
+        panner.pan.setValueAtTime(panValue, this.ctx.currentTime);
+
+        rainSource.connect(rainFilter);
+        rainFilter.connect(rainGain);
+        rainGain.connect(panner);
+        panner.connect(this.ctx.destination);
+
+        rainSource.start();
+        this.fadeInNode(rainGain, volume);
+
+        this.sources.spatialRain = rainSource;
+        this.gains.spatialRain = rainGain;
+        this.panners = this.panners || {};
+        this.panners.spatialRain = panner;
+    }
+
+    stopSpatialRain() {
+        if (this.sources.spatialRain) {
+            this.fadeOutAndStop(this.sources.spatialRain, this.gains.spatialRain, 0.4);
+            delete this.sources.spatialRain;
+            delete this.gains.spatialRain;
+            if (this.panners) delete this.panners.spatialRain;
+        }
+    }
+
+    setSpatialRainVolume(val) {
+        if (this.gains.spatialRain) {
+            this.gains.spatialRain.gain.setTargetAtTime(parseFloat(val), this.ctx.currentTime, 0.1);
+        }
+    }
+
+    startSpatialWind(panValue = 1.0, volume = 0.3) {
+        this.resumeContext();
+        if (this.sources.spatialWind) return;
+
+        const windSource = this.ctx.createBufferSource();
+        windSource.buffer = this.createNoiseBuffer('pink');
+        windSource.loop = true;
+
+        const windFilter = this.ctx.createBiquadFilter();
+        windFilter.type = 'bandpass';
+        windFilter.frequency.value = 400;
+        windFilter.Q.value = 2.0;
+
+        const windGain = this.ctx.createGain();
+        windGain.gain.value = 0.0;
+
+        const windLFO = this.ctx.createOscillator();
+        windLFO.frequency.value = 0.07;
+        const windLfoGain = this.ctx.createGain();
+        windLfoGain.gain.value = 180;
+
+        windLFO.connect(windLfoGain);
+        windLfoGain.connect(windFilter.frequency);
+
+        const panner = this.ctx.createStereoPanner();
+        panner.pan.setValueAtTime(panValue, this.ctx.currentTime);
+
+        windSource.connect(windFilter);
+        windFilter.connect(windGain);
+        windGain.connect(panner);
+        panner.connect(this.ctx.destination);
+
+        windSource.start();
+        windLFO.start();
+
+        this.fadeInNode(windGain, volume);
+
+        this.sources.spatialWind = windSource;
+        this.gains.spatialWind = windGain;
+        this.lfos = this.lfos || {};
+        this.lfos.spatialWindLfo = windLFO;
+        this.panners = this.panners || {};
+        this.panners.spatialWind = panner;
+    }
+
+    stopSpatialWind() {
+        if (this.sources.spatialWind) {
+            this.fadeOutAndStop(this.sources.spatialWind, this.gains.spatialWind, 0.4, this.lfos.spatialWindLfo);
+            delete this.sources.spatialWind;
+            delete this.gains.spatialWind;
+            delete this.lfos.spatialWindLfo;
+            if (this.panners) delete this.panners.spatialWind;
+        }
+    }
+
+    setSpatialWindVolume(val) {
+        if (this.gains.spatialWind) {
+            this.gains.spatialWind.gain.setTargetAtTime(parseFloat(val), this.ctx.currentTime, 0.1);
+        }
+    }
+
+    triggerSpatialChime(freq, panValue = 0.0, volume = 0.3) {
+        if (!this.ctx) return;
+        const now = this.ctx.currentTime;
+
+        const carrier = this.ctx.createOscillator();
+        carrier.type = 'sine';
+        carrier.frequency.setValueAtTime(freq, now);
+
+        const modulator = this.ctx.createOscillator();
+        modulator.type = 'sine';
+        modulator.frequency.setValueAtTime(freq * 1.5, now);
+
+        const modGain = this.ctx.createGain();
+        modGain.gain.setValueAtTime(freq * 0.8, now);
+        modGain.gain.exponentialRampToValueAtTime(0.01, now + 0.15);
+
+        const bellGain = this.ctx.createGain();
+        const duration = 1.5 + Math.random() * 1.5;
+
+        bellGain.gain.setValueAtTime(0, now);
+        bellGain.gain.linearRampToValueAtTime(volume * 0.4, now + 0.005);
+        bellGain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+
+        const panner = this.ctx.createStereoPanner();
+        panner.pan.setValueAtTime(panValue, now);
+
+        modulator.connect(modGain);
+        modGain.connect(carrier.frequency);
+        carrier.connect(bellGain);
+        bellGain.connect(panner);
+        panner.connect(this.ctx.destination);
+
+        carrier.start(now);
+        modulator.start(now);
+
+        carrier.stop(now + duration + 0.1);
+        modulator.stop(now + duration + 0.1);
+    }
+
+    startSpatialChimes(panValue = 0.0, volume = 0.3) {
+        this.resumeContext();
+        if (this.spatialChimesInterval) return;
+        this.spatialChimesVolume = volume;
+
+        this.spatialChimesInterval = setInterval(() => {
+            if (this.spatialChimesVolume > 0 && Math.random() > 0.3) {
+                const pitchIndex = Math.floor(Math.random() * this.chimePitches.length);
+                const freq = this.chimePitches[pitchIndex];
+                this.triggerSpatialChime(freq, panValue, this.spatialChimesVolume);
+            }
+        }, 1500 + Math.random() * 2000);
+    }
+
+    stopSpatialChimes() {
+        if (this.spatialChimesInterval) {
+            clearInterval(this.spatialChimesInterval);
+            this.spatialChimesInterval = null;
+        }
+    }
+
+    setSpatialChimesVolume(val) {
+        this.spatialChimesVolume = parseFloat(val);
+    }
+
     stopAll() {
         this.stopRain();
         this.stopWaves();
@@ -550,6 +724,9 @@ class AudioSynthesizer {
         this.stopBrownian();
         this.stopChimes();
         this.stopBreathingTone();
+        this.stopSpatialRain();
+        this.stopSpatialWind();
+        this.stopSpatialChimes();
     }
 }
 
