@@ -222,7 +222,56 @@ const L10N_DICT = {
         gad_a1: "An einzelnen Tagen (1)",
         gad_a2: "An mehr als der Hälfte der Tage (2)",
         gad_a3: "Beinahe jeden Tag (3)",
-        gad_btn_submit: "Ergebnisse auswerten & speichern 📊"
+        gad_btn_submit: "Ergebnisse auswerten & speichern 📊",
+        
+        // Advanced Tools (Tiefenarbeit)
+        nav_deepwork: "Tiefenarbeit",
+        deepwork_title: "Tiefenarbeit (Fortgeschritten)",
+        deepwork_subtitle: "Entwickle mentale Stärke. Trainiere deine Aufmerksamkeit, hinterfrage Lebensregeln und handle wertebasiert.",
+        deepwork_tab_mct: "Metakognition (MCT)",
+        deepwork_tab_schemas: "Glaubenssatz-Tagebuch",
+        deepwork_tab_values: "Werte-Kompass",
+        
+        mct_timer_title: "Grübelzeit-Timer (MCT)",
+        mct_timer_desc: "Begrenze deine Sorgenzeit aktiv auf 15 Minuten am Tag. Verschiebe alle Sorgen tagsüber auf diesen Zeitraum.",
+        mct_timer_start: "Grübelzeit starten ⏱️",
+        mct_timer_stop: "Grübelzeit beenden 🛑",
+        mct_timer_running: "Grübelzeit läuft... Nutze sie zum bewussten Reflektieren deiner parkierten Sorgen.",
+        mct_timer_finished: "Deine Sorgenzeit ist abgelaufen! Kehre jetzt wieder ins Hier & Jetzt zurück.",
+        
+        mct_att_title: "Aufmerksamkeitstraining (ATT)",
+        mct_att_desc: "Trainiere deine mentale Flexibilität. Setze Kopfhörer auf und folge den Anweisungen, um deine Aufmerksamkeit gezielt zu lenken.",
+        mct_att_start: "ATT Training starten 🎧",
+        mct_att_stop: "Training abbrechen ⏹️",
+        mct_att_stage_1: "Fokussiere dich NUR auf den Regen auf deiner LINKEN Seite. 🌧️",
+        mct_att_stage_2: "Fokussiere dich NUR auf den Wind auf deiner RECHTEN Seite. 🍃",
+        mct_att_stage_3: "Fokussiere dich NUR auf die Windspiele in der MITTE. 🔔",
+        mct_att_stage_4: "Weite deine Aufmerksamkeit aus. Versuche alle Töne GLEICHZEITIG zu hören. 🎧",
+        mct_att_stage_5: "Schneller Wechsel! Folge der roten Markierung auf dem Bildschirm!",
+        mct_att_finished: "Training beendet! Du hast deine Aufmerksamkeit erfolgreich trainiert. Spüre die geistige Ruhe.",
+        
+        schema_title: "Glaubenssatz-Tagebuch (Schematherapie)",
+        schema_desc: "Bearbeite deine tiefsten Lebensregeln (Lebensfallen). Vergleiche logische Beweise und formuliere gesunde Annahmen.",
+        schema_btn_add: "Neuen Glaubenssatz analysieren ➕",
+        schema_lbl_name: "Name des Glaubenssatzes / Schema (z. B. 'Ich bin unzulänglich')",
+        schema_lbl_strength: "Wie stark glaubst du aktuell daran? (0-100%)",
+        schema_lbl_evidence_pro: "Beweise, die dafür sprechen (Warum dein Kopf das glaubt)",
+        schema_lbl_evidence_con: "Beweise, die dagegen sprechen (Objektive Tatsachen & Gegenbeweise)",
+        schema_lbl_healthy: "Gesunde Regel (Was sagt deine gesunde, weise Erwachsenen-Stimme?)",
+        schema_save: "Glaubenssatz speichern 💾",
+        schema_empty: "Noch keine Glaubenssätze eingetragen. Starte mit deiner ersten Glaubenssatz-Analyse.",
+        
+        values_title: "Werte-Kompass (ACT)",
+        values_desc: "Angst macht uns starr. Definiere, was dir in den Kernbereichen deines Lebens wichtig ist, und nimm dir eine kleine Handlung vor.",
+        values_cat_relations: "Beziehungen & Familie",
+        values_cat_health: "Gesundheit & Selbstfürsorge",
+        values_cat_growth: "Karriere & Wachstum",
+        values_cat_mindfulness: "Achtsamkeit & Ruhe",
+        values_placeholder: "Was ist dir in diesem Bereich besonders wichtig?",
+        values_action_lbl: "Mein konkreter Schritt für HEUTE:",
+        values_action_placeholder: "z. B. 10 Min. anrufen oder spazieren gehen",
+        values_save: "Werte-Schritt sichern 🎯",
+        values_dashboard_card: "Heutige Werte-Schritte"
     },
     ar: {
         logo: "واحة الهدوء",
@@ -439,7 +488,56 @@ const L10N_DICT = {
         gad_a1: "لعدة أيام (1)",
         gad_a2: "لأكثر من نصف الأيام (2)",
         gad_a3: "كل يوم تقريباً (3)",
-        gad_btn_submit: "تحليل وحفظ النتائج 📊"
+        gad_btn_submit: "تحليل وحفظ النتائج 📊",
+        
+        // Advanced Tools (Tiefenarbeit)
+        nav_deepwork: "العمل العميق",
+        deepwork_title: "العمل العميق (متقدم)",
+        deepwork_subtitle: "طور قوتك العقلية. درب مرونة انتباهك، وتحد قواعد الحياة التلقائية، وتصرف بناءً على قيمك الحقيقية.",
+        deepwork_tab_mct: "ميتا-معرفة (MCT)",
+        deepwork_tab_schemas: "سجل المعتقدات الأساسية",
+        deepwork_tab_values: "بوصلة القيم",
+        
+        mct_timer_title: "مؤقت وقت القلق (MCT)",
+        mct_timer_desc: "حدد وقت قلقك اليومي بـ 15 دقيقة فقط. قم بتأجيل جميع الأفكار المقلقة طوال اليوم إلى هذه الفترة الخاصة.",
+        mct_timer_start: "بدء وقت القلق ⏱️",
+        mct_timer_stop: "إنهاء وقت القلق 🛑",
+        mct_timer_running: "وقت القلق قيد التشغيل... استخدم هذا الوقت للتمعن الواعي في مخاوفك المؤجلة.",
+        mct_timer_finished: "انتهى وقت القلق الخاص بك! عد الآن بوعيك الكامل إلى الحاضر والأن.",
+        
+        mct_att_title: "تدريب تركيز الانتباه (ATT)",
+        mct_att_desc: "درب مرونتك العقلية. ضع سماعات الأذن واتبع التعليمات لتوجيه انتباهك الصوتي بشكل هادف.",
+        mct_att_start: "بدء تدريب ATT 🎧",
+        mct_att_stop: "إلغاء التدريب ⏹️",
+        mct_att_stage_1: "ركز انتباهك فقط على صوت المطر في جانبك الأيسر. 🌧️",
+        mct_att_stage_2: "ركز انتباهك فقط على صوت الرياح في جانبك الأيمن. 🍃",
+        mct_att_stage_3: "ركز انتباهك فقط على أصوات الأجراس في المنتصف. 🔔",
+        mct_att_stage_4: "وسع نطاق انتباهك. حاول الاستماع إلى جميع الأصوات الثلاثة في نفس الوقت. 🎧",
+        mct_att_stage_5: "تنقل سريع! اتبع المؤشر الأحمر الظاهر على الشاشة!",
+        mct_att_finished: "انتهى التدريب بنجاح! لقد قمت بتمرين عضلات انتباهك وتوجيهه بوعي. اشعر بالهدوء الآن.",
+        
+        schema_title: "مذكرات المعتقدات الأساسية (العلاج بالمخططات)",
+        schema_desc: "تحد معتقداتك وقواعد حياتك العميقة (أفخاخ الحياة). قارن الأدلة وصغ قواعد صحية وبديلة.",
+        schema_btn_add: "تحليل معتقد أساسي جديد ➕",
+        schema_lbl_name: "اسم المعتقد الأساسي / المخطط (مثال: 'أنا غير كافٍ')",
+        schema_lbl_strength: "ما مدى تصديقك الحالي لهذا المعتقد؟ (0-100%)",
+        schema_lbl_evidence_pro: "الأدلة التي تؤيده (لماذا يعتقد عقلك أنه صحيح؟)",
+        schema_lbl_evidence_con: "الأدلة التي تعارضه (الحقائق والأدلة الواقعية المعاكسة)",
+        schema_lbl_healthy: "صوت البالغ الحكيم البديل (ما هي القاعدة الجديدة الأكثر عقلانية؟)",
+        schema_save: "حفظ المعتقد الأساسي 💾",
+        schema_empty: "لا توجد معتقدات مسجلة بعد. ابدأ بأول تحليل لمعتقداتك العميقة.",
+        
+        values_title: "بوصلة القيم الشخصية (ACT)",
+        values_desc: "القلق يجعلنا متصلبين. حدد ما هو مهم بالنسبة لك في مجالات حياتك الأساسية، والتزم بخطوة صغيرة اليوم.",
+        values_cat_relations: "العلاقات والعائلة",
+        values_cat_health: "الصحة والعناية بالذات",
+        values_cat_growth: "العمل والنمو الشخصي",
+        values_cat_mindfulness: "اليقظة والهدوء والراحة",
+        values_placeholder: "ما الذي يهمك وله قيمة حقيقية بالنسبة لك في هذا المجال؟",
+        values_action_lbl: "خطوتي الملموسة لليوم:",
+        values_action_placeholder: "مثال: الاتصال بصديق لمدة 5 دقائق أو المشي اليقظ",
+        values_save: "حفظ خطوة القيمة 🎯",
+        values_dashboard_card: "خطوات القيم اليومية"
     }
 };
 
@@ -459,6 +557,14 @@ class RuheOaseApp {
             moodHistory: [],
             gadScores: [],
             reframedThoughts: [],
+            coreBeliefs: [],
+            valuesCompass: {
+                relationships: "",
+                health: "",
+                growth: "",
+                mindfulness: "",
+                actions: {}
+            },
             settings: {
                 worryTime: "18:00",
                 language: "de", // Default language (de)
@@ -556,6 +662,15 @@ class RuheOaseApp {
             try {
                 const parsed = JSON.parse(stored);
                 this.state = { ...this.state, ...parsed };
+                this.state.coreBeliefs = parsed.coreBeliefs || [];
+                this.state.valuesCompass = {
+                    relationships: "",
+                    health: "",
+                    growth: "",
+                    mindfulness: "",
+                    actions: {},
+                    ...parsed.valuesCompass
+                };
                 // Deep merge settings
                 this.state.settings = { 
                     worryTime: "18:00", 
@@ -646,7 +761,7 @@ class RuheOaseApp {
         this.switchTab(this.activeTab);
     }
 
-    switchTab(tabId) {
+    switchTab(tabId, subtabId = null) {
         document.querySelectorAll('.nav-item, .mobile-nav-item').forEach(el => {
             if (el.getAttribute('data-tab') === tabId) {
                 el.classList.add('active');
@@ -665,7 +780,11 @@ class RuheOaseApp {
 
         this.onTabLeave(this.activeTab);
         this.activeTab = tabId;
-        this.onTabEnter(tabId);
+        if (tabId === 'tiefenarbeit' && subtabId) {
+            this.initTiefenarbeit(subtabId);
+        } else {
+            this.onTabEnter(tabId);
+        }
     }
 
     onTabEnter(tabId) {
@@ -681,6 +800,8 @@ class RuheOaseApp {
             this.renderHistory();
         } else if (tabId === 'coach') {
             this.initCbtCoach();
+        } else if (tabId === 'tiefenarbeit') {
+            this.initTiefenarbeit();
         }
     }
 
@@ -691,6 +812,9 @@ class RuheOaseApp {
         if (tabId === 'atem') {
             this.stopBreathing();
             this.stopVagusExercise();
+        }
+        if (tabId === 'tiefenarbeit') {
+            this.leaveTiefenarbeit();
         }
     }
 
@@ -958,6 +1082,7 @@ class RuheOaseApp {
         }
 
         advisorText.innerText = recommendation;
+        this.renderDashboardValues();
     }
 
     // === 2. WORRY POSTPONEMENT & ARCHIVE ===
@@ -2591,6 +2716,372 @@ class RuheOaseApp {
                 }
             });
         });
+    }
+
+    // === TIEFENARBEIT (FORTGESCHRITTEN) CONTROLLER ===
+    initTiefenarbeit(defaultSubtab = 'mct') {
+        this.switchTiefenarbeitSubtab(defaultSubtab);
+        this.renderCoreBeliefs();
+        this.renderValuesCompass();
+    }
+
+    leaveTiefenarbeit() {
+        this.stopAttExercise();
+    }
+
+    switchTiefenarbeitSubtab(subtabId) {
+        document.querySelectorAll('.subtab-btn').forEach(btn => {
+            if (btn.getAttribute('data-subtab') === subtabId) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+
+        document.querySelectorAll('.subtab-content').forEach(content => {
+            if (content.id === `${subtabId}-subtab-content`) {
+                content.classList.add('active');
+            } else {
+                content.classList.remove('active');
+            }
+        });
+        
+        this.activeSubtab = subtabId;
+    }
+
+    // === METAKOGNITIVE THERAPIE (MCT) & TIMER ===
+    toggleMctWorryTimer() {
+        if (this.worryTimerInterval) {
+            this.stopMctWorryTimer();
+        } else {
+            this.startMctWorryTimer();
+        }
+    }
+
+    startMctWorryTimer() {
+        if (this.worryTimerInterval) return;
+        
+        window.synth.resumeContext();
+        
+        let secondsRemaining = 15 * 60; // 15 minutes
+        const timerText = document.getElementById('worry-timer-text');
+        const timerRing = document.getElementById('worry-timer-ring');
+        const btn = document.getElementById('worry-timer-btn');
+        const statusText = document.getElementById('worry-timer-status');
+        
+        if (btn) btn.innerText = this._t('mct_timer_stop');
+        if (statusText) statusText.innerText = this._t('mct_timer_running');
+        
+        const updateTimerUI = () => {
+            const mins = Math.floor(secondsRemaining / 60);
+            const secs = secondsRemaining % 60;
+            if (timerText) timerText.innerText = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+            
+            const percent = secondsRemaining / (15 * 60);
+            const offset = 283 * (1 - percent);
+            if (timerRing) timerRing.style.strokeDashoffset = offset;
+        };
+        
+        updateTimerUI();
+        
+        this.worryTimerInterval = setInterval(() => {
+            secondsRemaining--;
+            updateTimerUI();
+            
+            if (secondsRemaining <= 0) {
+                this.stopMctWorryTimer();
+                window.synth.playNotificationSound();
+                alert(this._t('mct_timer_finished'));
+            }
+        }, 1000);
+    }
+
+    stopMctWorryTimer() {
+        if (this.worryTimerInterval) {
+            clearInterval(this.worryTimerInterval);
+            this.worryTimerInterval = null;
+        }
+        
+        const btn = document.getElementById('worry-timer-btn');
+        const statusText = document.getElementById('worry-timer-status');
+        const timerText = document.getElementById('worry-timer-text');
+        const timerRing = document.getElementById('worry-timer-ring');
+        
+        if (btn) btn.innerText = this._t('mct_timer_start');
+        if (statusText) statusText.innerText = "";
+        if (timerText) timerText.innerText = "15:00";
+        if (timerRing) timerRing.style.strokeDashoffset = 0;
+    }
+
+    // === ATTENTION TRAINING TECHNIQUE (ATT) ===
+    toggleAttExercise() {
+        if (this.attInterval) {
+            this.stopAttExercise();
+        } else {
+            this.startAttExercise();
+        }
+    }
+
+    startAttExercise() {
+        if (this.attInterval) return;
+
+        window.synth.resumeContext();
+        
+        const btn = document.getElementById('att-start-btn');
+        if (btn) btn.innerText = this._t('mct_att_stop');
+        
+        let elapsedSeconds = 0;
+        const totalDuration = 180; // 3 minutes total
+        
+        const progressFill = document.getElementById('att-progress-fill');
+        const instructionText = document.getElementById('att-instruction-text');
+        
+        window.synth.startSpatialRain(-1.0, 0.05);
+        window.synth.startSpatialWind(1.0, 0.05);
+        window.synth.startSpatialChimes(0.0, 0.05);
+        
+        const updateAttUI = (stage, activeSpeakerId, textKey) => {
+            if (instructionText) instructionText.innerText = this._t(textKey);
+            
+            document.querySelectorAll('.att-speaker').forEach(spk => {
+                if (spk.id === activeSpeakerId) {
+                    spk.classList.add('active');
+                } else {
+                    spk.classList.remove('active');
+                }
+            });
+        };
+        
+        let lastShiftTime = 0;
+        let currentSpeaker = 'center';
+        
+        const tick = () => {
+            elapsedSeconds++;
+            
+            const pct = (elapsedSeconds / totalDuration) * 100;
+            if (progressFill) progressFill.style.width = `${pct}%`;
+            
+            if (elapsedSeconds <= 60) {
+                updateAttUI(1, 'att-spk-left', 'mct_att_stage_1');
+                window.synth.setSpatialRainVolume(0.5);
+                window.synth.setSpatialWindVolume(0.03);
+                window.synth.setSpatialChimesVolume(0.03);
+            } else if (elapsedSeconds <= 120) {
+                updateAttUI(2, 'att-spk-right', 'mct_att_stage_2');
+                window.synth.setSpatialRainVolume(0.03);
+                window.synth.setSpatialWindVolume(0.5);
+                window.synth.setSpatialChimesVolume(0.03);
+            } else if (elapsedSeconds <= 150) {
+                updateAttUI(3, 'att-spk-center', 'mct_att_stage_3');
+                window.synth.setSpatialRainVolume(0.03);
+                window.synth.setSpatialWindVolume(0.03);
+                window.synth.setSpatialChimesVolume(0.5);
+            } else if (elapsedSeconds <= 165) {
+                updateAttUI(4, '', 'mct_att_stage_4');
+                window.synth.setSpatialRainVolume(0.35);
+                window.synth.setSpatialWindVolume(0.35);
+                window.synth.setSpatialChimesVolume(0.35);
+            } else if (elapsedSeconds < totalDuration) {
+                updateAttUI(5, 'att-spk-' + currentSpeaker, 'mct_att_stage_5');
+                
+                if (elapsedSeconds - lastShiftTime >= 3) {
+                    const speakers = ['left', 'center', 'right'];
+                    const nextIndex = (speakers.indexOf(currentSpeaker) + 1) % speakers.length;
+                    currentSpeaker = speakers[nextIndex];
+                    lastShiftTime = elapsedSeconds;
+                    
+                    if (currentSpeaker === 'left') {
+                        window.synth.setSpatialRainVolume(0.5);
+                        window.synth.setSpatialWindVolume(0.05);
+                        window.synth.setSpatialChimesVolume(0.05);
+                    } else if (currentSpeaker === 'right') {
+                        window.synth.setSpatialRainVolume(0.05);
+                        window.synth.setSpatialWindVolume(0.5);
+                        window.synth.setSpatialChimesVolume(0.05);
+                    } else {
+                        window.synth.setSpatialRainVolume(0.05);
+                        window.synth.setSpatialWindVolume(0.05);
+                        window.synth.setSpatialChimesVolume(0.5);
+                    }
+                }
+            } else {
+                this.stopAttExercise();
+                window.synth.playNotificationSound();
+                if (instructionText) instructionText.innerText = this._t('mct_att_finished');
+            }
+        };
+        
+        tick();
+        this.attInterval = setInterval(tick, 1000);
+    }
+
+    stopAttExercise() {
+        if (this.attInterval) {
+            clearInterval(this.attInterval);
+            this.attInterval = null;
+        }
+        
+        window.synth.stopSpatialRain();
+        window.synth.stopSpatialWind();
+        window.synth.stopSpatialChimes();
+        
+        const btn = document.getElementById('att-start-btn');
+        if (btn) btn.innerText = this._t('mct_att_start');
+        
+        const progressFill = document.getElementById('att-progress-fill');
+        if (progressFill) progressFill.style.width = '0%';
+        
+        document.querySelectorAll('.att-speaker').forEach(spk => {
+            spk.classList.remove('active');
+        });
+        
+        const instructionText = document.getElementById('att-instruction-text');
+        if (instructionText) instructionText.innerText = this._t('mct_att_start');
+    }
+
+    // === SCHEMATHERAPIE / GLAUBENSSATZ-TAGEBUCH ===
+    addCoreBelief(e) {
+        e.preventDefault();
+        
+        const nameInput = document.getElementById('schema-input-name');
+        const strengthInput = document.getElementById('schema-input-strength');
+        const proInput = document.getElementById('schema-input-pro');
+        const conInput = document.getElementById('schema-input-con');
+        const healthyInput = document.getElementById('schema-input-healthy');
+        
+        if (!nameInput || !proInput || !conInput || !healthyInput) return;
+        
+        const belief = {
+            id: 'schema_' + Date.now(),
+            date: new Date().toLocaleDateString(this.state.settings.language === 'ar' ? 'ar-EG' : 'de-DE'),
+            name: nameInput.value.trim(),
+            strength: parseInt(strengthInput.value),
+            pro: proInput.value.trim(),
+            con: conInput.value.trim(),
+            healthy: healthyInput.value.trim()
+        };
+        
+        this.state.coreBeliefs.unshift(belief);
+        this.saveState();
+        
+        nameInput.value = "";
+        strengthInput.value = 80;
+        const valIndicator = document.getElementById('schema-strength-val');
+        if (valIndicator) valIndicator.innerText = "80%";
+        proInput.value = "";
+        conInput.value = "";
+        healthyInput.value = "";
+        
+        this.renderCoreBeliefs();
+    }
+
+    deleteCoreBelief(id) {
+        this.state.coreBeliefs = this.state.coreBeliefs.filter(b => b.id !== id);
+        this.saveState();
+        this.renderCoreBeliefs();
+    }
+
+    renderCoreBeliefs() {
+        const container = document.getElementById('schema-beliefs-list');
+        if (!container) return;
+        
+        const beliefs = this.state.coreBeliefs || [];
+        if (beliefs.length === 0) {
+            container.innerHTML = `<p style="font-size:0.9rem; color:var(--text-muted); text-align:center; padding: 2rem 0;">${this._t('schema_empty')}</p>`;
+            return;
+        }
+        
+        container.innerHTML = beliefs.map(b => `
+            <div class="schema-belief-card">
+                <div class="schema-card-header">
+                    <h3 class="schema-card-title">${this.escapeHtml(b.name)}</h3>
+                    <div style="display:flex; align-items:center; gap:0.75rem;">
+                        <span class="schema-card-strength-badge">${b.strength}%</span>
+                        <button class="btn-icon-danger" title="Löschen" onclick="app.deleteCoreBelief('${b.id}')" style="background:none; border:none; color:var(--accent-red); cursor:pointer; font-size:1.1rem;">🗑️</button>
+                    </div>
+                </div>
+                <div class="schema-card-section">
+                    <span class="schema-card-section-label">${this._t('schema_lbl_evidence_pro')}</span>
+                    <div class="schema-card-section-content">${this.escapeHtml(b.pro)}</div>
+                </div>
+                <div class="schema-card-section">
+                    <span class="schema-card-section-label">${this._t('schema_lbl_evidence_con')}</span>
+                    <div class="schema-card-section-content">${this.escapeHtml(b.con)}</div>
+                </div>
+                <div class="schema-card-section">
+                    <span class="schema-card-section-label" style="color:var(--accent-teal);">${this._t('schema_lbl_healthy')}</span>
+                    <div class="schema-card-section-content" style="border-color: rgba(45, 212, 191, 0.15); background: rgba(45, 212, 191, 0.02);">${this.escapeHtml(b.healthy)}</div>
+                </div>
+                <div style="font-size:0.75rem; color:var(--text-muted); text-align:right;">${b.date}</div>
+            </div>
+        `).join('');
+    }
+
+    // === ACT WERTE-KOMPASS ===
+    saveValueCommit(area, value) {
+        this.state.valuesCompass[area] = value.trim();
+        this.saveState();
+        this.renderDashboardValues();
+    }
+
+    saveValueAction(area, action) {
+        this.state.valuesCompass.actions = this.state.valuesCompass.actions || {};
+        this.state.valuesCompass.actions[area] = action.trim();
+        this.saveState();
+        this.renderDashboardValues();
+    }
+
+    renderValuesCompass() {
+        const areas = ['relationships', 'health', 'growth', 'mindfulness'];
+        areas.forEach(area => {
+            const inputVal = document.getElementById(`value-input-${area}`);
+            const inputAction = document.getElementById(`value-action-${area}`);
+            
+            if (inputVal) inputVal.value = this.state.valuesCompass[area] || "";
+            if (inputAction) inputAction.value = (this.state.valuesCompass.actions && this.state.valuesCompass.actions[area]) || "";
+        });
+        
+        this.renderDashboardValues();
+    }
+
+    renderDashboardValues() {
+        const container = document.getElementById('dashboard-values-list');
+        if (!container) return;
+        
+        const actions = this.state.valuesCompass.actions || {};
+        const activeActions = Object.entries(actions).filter(([area, action]) => action.trim() !== "");
+        
+        if (activeActions.length === 0) {
+            container.innerHTML = `<p style="font-size:0.85rem; color:var(--text-muted); margin:0;">${this.state.settings.language === 'ar' ? 'لا توجد خطوات قيم محددة لليوم.' : 'Keine heutigen Werte-Schritte festgelegt. Setze einen im Werte-Kompass!'}</p>`;
+            return;
+        }
+        
+        const areaLabels = {
+            relationships: this._t('values_cat_relations'),
+            health: this._t('values_cat_health'),
+            growth: this._t('values_cat_growth'),
+            mindfulness: this._t('values_cat_mindfulness')
+        };
+        
+        container.innerHTML = activeActions.map(([area, action]) => `
+            <div style="display:flex; align-items:center; gap:0.5rem; font-size:0.9rem; background:rgba(255,255,255,0.02); padding:0.5rem 0.75rem; border-radius:10px; border:1px solid rgba(255,255,255,0.03)">
+                <span style="font-size:1.1rem;">🎯</span>
+                <div>
+                    <strong style="color:var(--accent-gold); font-size:0.75rem; text-transform:uppercase; display:block;">${areaLabels[area] || area}</strong>
+                    <span>${this.escapeHtml(action)}</span>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    escapeHtml(str) {
+        if (!str) return '';
+        return str.toString()
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
     }
 }
 
