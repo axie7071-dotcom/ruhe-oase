@@ -84,6 +84,12 @@
                         <span data-l10n="nav_progress">Fortschritt (GAD-7)</span>
                     </button>
                 </li>
+                <li class="nav-item" data-tab="tiefenarbeit">
+                    <button>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        <span data-l10n="nav_deepwork">Tiefenarbeit</span>
+                    </button>
+                </li>
             </ul>
 
             <div class="sidebar-footer">
@@ -180,31 +186,42 @@
                         </div>
                     </div>
 
-                    <!-- Mood Logger Card -->
-                    <div class="glass-card">
-                        <h3 data-l10n="checkin_title" style="margin-bottom: 0.5rem; font-family: var(--font-heading);">Check-In</h3>
-                        <p data-l10n="checkin_sub" style="font-size: 0.85rem; color: var(--text-secondary);">Wie fühlst du dich in diesem Moment?</p>
-                        <div class="mood-selector">
-                            <button class="mood-btn" data-rating="1" title="Sehr unruhig">
-                                <span class="mood-emoji">😞</span>
-                                <span class="mood-label" data-l10n="mood_1">Sehr unruhig</span>
-                            </button>
-                            <button class="mood-btn" data-rating="2" title="Unruhig">
-                                <span class="mood-emoji">😟</span>
-                                <span class="mood-label" data-l10n="mood_2">Unruhig</span>
-                            </button>
-                            <button class="mood-btn" data-rating="3" title="Neutral">
-                                <span class="mood-emoji">😐</span>
-                                <span class="mood-label" data-l10n="mood_3">Neutral</span>
-                            </button>
-                            <button class="mood-btn" data-rating="4" title="Ruhig">
-                                <span class="mood-emoji">🙂</span>
-                                <span class="mood-label" data-l10n="mood_4">Ruhig</span>
-                            </button>
-                            <button class="mood-btn" data-rating="5" title="Sehr ruhig">
-                                <span class="mood-emoji">😌</span>
-                                <span class="mood-label" data-l10n="mood_5">Sehr ruhig</span>
-                            </button>
+                    <!-- Right column: Check-In & Values Steps -->
+                    <div style="display:flex; flex-direction:column; gap:1.5rem;">
+                        <!-- Mood Logger Card -->
+                        <div class="glass-card" style="margin-bottom: 0;">
+                            <h3 data-l10n="checkin_title" style="margin-bottom: 0.5rem; font-family: var(--font-heading);">Check-In</h3>
+                            <p data-l10n="checkin_sub" style="font-size: 0.85rem; color: var(--text-secondary);">Wie fühlst du dich in diesem Moment?</p>
+                            <div class="mood-selector">
+                                <button class="mood-btn" data-rating="1" title="Sehr unruhig">
+                                    <span class="mood-emoji">😞</span>
+                                    <span class="mood-label" data-l10n="mood_1">Sehr unruhig</span>
+                                </button>
+                                <button class="mood-btn" data-rating="2" title="Unruhig">
+                                    <span class="mood-emoji">😟</span>
+                                    <span class="mood-label" data-l10n="mood_2">Unruhig</span>
+                                </button>
+                                <button class="mood-btn" data-rating="3" title="Neutral">
+                                    <span class="mood-emoji">😐</span>
+                                    <span class="mood-label" data-l10n="mood_3">Neutral</span>
+                                </button>
+                                <button class="mood-btn" data-rating="4" title="Ruhig">
+                                    <span class="mood-emoji">🙂</span>
+                                    <span class="mood-label" data-l10n="mood_4">Ruhig</span>
+                                </button>
+                                <button class="mood-btn" data-rating="5" title="Sehr ruhig">
+                                    <span class="mood-emoji">😌</span>
+                                    <span class="mood-label" data-l10n="mood_5">Sehr ruhig</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Values Dashboard Card -->
+                        <div class="glass-card">
+                            <h3 data-l10n="values_dashboard_card" style="margin-bottom: 0.75rem; font-family: var(--font-heading); color: var(--accent-gold);">Heutige Werte-Schritte</h3>
+                            <div id="dashboard-values-list" style="display:flex; flex-direction:column; gap:0.5rem;">
+                                <!-- JS populated -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -265,6 +282,26 @@
                         <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">🚨</div>
                         <h3 data-l10n="nav_sos" style="margin-bottom: 0.5rem;">SOS Panik-Hilfe</h3>
                         <p data-l10n="card_sos_desc" style="font-size: 0.85rem; color: var(--text-secondary);"></p>
+                    </div>
+                </div>
+
+                <!-- Advanced Work -->
+                <h2 data-l10n="deepwork_title" style="margin-top: 2rem; margin-bottom: 1.5rem;">Tiefenarbeit (Fortgeschritten)</h2>
+                <div class="grid-3" style="margin-bottom: 2rem;">
+                    <div class="glass-card interactive" onclick="app.switchTab('tiefenarbeit', 'mct')">
+                        <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">⏱️</div>
+                        <h3 data-l10n="deepwork_tab_mct" style="margin-bottom: 0.5rem;">Metakognition (MCT)</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary);">Grübelzeit-Timer & Aufmerksamkeitstraining (ATT).</p>
+                    </div>
+                    <div class="glass-card interactive" onclick="app.switchTab('tiefenarbeit', 'schemas')">
+                        <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">📖</div>
+                        <h3 data-l10n="deepwork_tab_schemas" style="margin-bottom: 0.5rem;">Glaubenssatz-Tagebuch</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary);">Hinterfrage deine tiefsten Lebensregeln und Glaubenssätze.</p>
+                    </div>
+                    <div class="glass-card interactive" onclick="app.switchTab('tiefenarbeit', 'values')">
+                        <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">🎯</div>
+                        <h3 data-l10n="deepwork_tab_values" style="margin-bottom: 0.5rem;">Werte-Kompass</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary);">Richte dein alltägliches Handeln an deinen wahren Werten aus.</p>
                     </div>
                 </div>
             </section>
@@ -720,6 +757,206 @@
                             
                             <div id="coach-reframed-list" style="display:flex; flex-direction:column; gap:1rem;">
                                 <!-- JS populated -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 9. TIEFENARBEIT (FORTGESCHRITTEN) TAB -->
+            <section id="tiefenarbeit-tab" class="tab-content">
+                <div class="page-header">
+                    <h1 class="page-title" data-l10n="deepwork_title">Tiefenarbeit (Fortgeschritten)</h1>
+                    <p class="page-subtitle" data-l10n="deepwork_subtitle">Entwickle mentale Stärke. Trainiere deine Aufmerksamkeit, hinterfrage Lebensregeln und handle wertebasiert.</p>
+                </div>
+
+                <!-- Sub-tabs navigation bar -->
+                <div class="tiefenarbeit-subtabs-bar" style="display: flex; gap: 1rem; margin-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.5rem;">
+                    <button class="subtab-btn active" data-subtab="mct" onclick="app.switchTiefenarbeitSubtab('mct')" style="background: none; border: none; color: var(--text-secondary); font-weight: 600; padding: 0.5rem 1rem; cursor: pointer; transition: all 0.3s; border-radius: 8px;">
+                        <span data-l10n="deepwork_tab_mct">Metakognition (MCT)</span>
+                    </button>
+                    <button class="subtab-btn" data-subtab="schemas" onclick="app.switchTiefenarbeitSubtab('schemas')" style="background: none; border: none; color: var(--text-secondary); font-weight: 600; padding: 0.5rem 1rem; cursor: pointer; transition: all 0.3s; border-radius: 8px;">
+                        <span data-l10n="deepwork_tab_schemas">Glaubenssatz-Tagebuch</span>
+                    </button>
+                    <button class="subtab-btn" data-subtab="values" onclick="app.switchTiefenarbeitSubtab('values')" style="background: none; border: none; color: var(--text-secondary); font-weight: 600; padding: 0.5rem 1rem; cursor: pointer; transition: all 0.3s; border-radius: 8px;">
+                        <span data-l10n="deepwork_tab_values">Werte-Kompass</span>
+                    </button>
+                </div>
+
+                <!-- 1. MCT SUBTAB CONTENT -->
+                <div id="mct-subtab-content" class="subtab-content active">
+                    <div class="grid-2-1">
+                        <!-- Left: Attention Training Technique (ATT) -->
+                        <div class="glass-card">
+                            <h2 data-l10n="mct_att_title" style="color: var(--accent-teal); margin-bottom: 0.5rem;">Aufmerksamkeitstraining (ATT)</h2>
+                            <p data-l10n="mct_att_desc" style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem;">Trainiere deine mentale Flexibilität. Setze Kopfhörer auf und folge den Anweisungen, um deine Aufmerksamkeit gezielt zu lenken.</p>
+                            
+                            <!-- ATT Visual Trainer container -->
+                            <div class="att-visual-trainer" style="background: rgba(0,0,0,0.2); border-radius: 16px; padding: 2rem; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 1.5rem;">
+                                <div class="att-speaker-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center; margin-bottom: 2rem;">
+                                    <div class="att-speaker left" id="att-spk-left" style="padding: 1rem; border-radius: 12px; background: rgba(255,255,255,0.02); border: 2px solid transparent; transition: all 0.3s;">
+                                        <div class="spk-icon" style="font-size: 2rem; margin-bottom: 0.25rem;">🌧️</div>
+                                        <div class="spk-label" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">LINKS</div>
+                                    </div>
+                                    <div class="att-speaker center" id="att-spk-center" style="padding: 1rem; border-radius: 12px; background: rgba(255,255,255,0.02); border: 2px solid transparent; transition: all 0.3s;">
+                                        <div class="spk-icon" style="font-size: 2rem; margin-bottom: 0.25rem;">🔔</div>
+                                        <div class="spk-label" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">MITTE</div>
+                                    </div>
+                                    <div class="att-speaker right" id="att-spk-right" style="padding: 1rem; border-radius: 12px; background: rgba(255,255,255,0.02); border: 2px solid transparent; transition: all 0.3s;">
+                                        <div class="spk-icon" style="font-size: 2rem; margin-bottom: 0.25rem;">🍃</div>
+                                        <div class="spk-label" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">RECHTS</div>
+                                    </div>
+                                </div>
+                                <div class="att-instruction-box" style="min-height: 80px; display: flex; align-items: center; justify-content: center; text-align: center; background: rgba(255,255,255,0.01); border-radius: 12px; padding: 1rem; border: 1px solid rgba(255,255,255,0.02); margin-bottom: 1.5rem;">
+                                    <p id="att-instruction-text" data-l10n="mct_att_start" style="font-size: 1.1rem; font-weight: 600; color: var(--text-primary); margin: 0;">Klicke unten, um das Training zu starten. 🎧</p>
+                                </div>
+                                <div class="att-progress-bar" style="height: 6px; background: rgba(255,255,255,0.05); border-radius: 3px; overflow: hidden;">
+                                    <div class="att-progress-fill" id="att-progress-fill" style="width: 0%; height: 100%; background: var(--accent-teal); transition: width 0.5s linear;"></div>
+                                </div>
+                            </div>
+
+                            <button id="att-start-btn" class="btn btn-primary" style="width: 100%;" onclick="app.toggleAttExercise()">
+                                <span data-l10n="mct_att_start">ATT Training starten 🎧</span>
+                            </button>
+                        </div>
+
+                        <!-- Right: Grübelzeit-Timer (MCT) -->
+                        <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 400px;">
+                            <div>
+                                <h2 data-l10n="mct_timer_title" style="color: var(--accent-gold); margin-bottom: 0.5rem;">Grübelzeit-Timer (MCT)</h2>
+                                <p data-l10n="mct_timer_desc" style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem;">Begrenze deine Sorgenzeit aktiv auf 15 Minuten am Tag. Verschiebe alle Sorgen tagsüber auf diesen Zeitraum.</p>
+                                
+                                <div class="worry-timer-display-container" style="display: flex; justify-content: center; align-items: center; margin: 2rem 0;">
+                                    <div class="worry-timer-circle" style="position: relative; width: 180px; height: 180px; display: flex; align-items: center; justify-content: center;">
+                                        <svg viewBox="0 0 100 100" style="position: absolute; top:0; left:0; width:100%; height:100%; transform: rotate(-90deg);">
+                                            <circle cx="50" cy="50" r="45" style="fill: none; stroke: rgba(255,255,255,0.03); stroke-width: 6;"></circle>
+                                            <circle cx="50" cy="50" r="45" id="worry-timer-ring" style="fill: none; stroke: var(--accent-gold); stroke-width: 6; stroke-dasharray: 283; stroke-dashoffset: 0; stroke-linecap: round; transition: stroke-dashoffset 1s linear;"></circle>
+                                        </svg>
+                                        <div class="worry-timer-text" id="worry-timer-text" style="font-size: 2.2rem; font-weight: 800; color: var(--text-primary);">15:00</div>
+                                    </div>
+                                </div>
+                                
+                                <p id="worry-timer-status" class="worry-timer-status-text" style="font-size:0.9rem; text-align:center; color: var(--text-secondary); margin-top: 1rem;"></p>
+                            </div>
+
+                            <button id="worry-timer-btn" class="btn btn-warning" style="width: 100%; margin-top: 1.5rem;" onclick="app.toggleMctWorryTimer()">
+                                <span data-l10n="mct_timer_start">Grübelzeit starten ⏱️</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. SCHEMATHERAPIE SUBTAB CONTENT -->
+                <div id="schemas-subtab-content" class="subtab-content">
+                    <div class="grid-2-1">
+                        <!-- Left: Core Belief Diary List -->
+                        <div class="glass-card" style="display:flex; flex-direction:column; justify-content:space-between; min-height: 500px;">
+                            <div>
+                                <h2 data-l10n="schema_title" style="color: var(--accent-lavender); margin-bottom: 0.5rem;">Glaubenssatz-Tagebuch (Schematherapie)</h2>
+                                <p data-l10n="schema_desc" style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem;">Bearbeite deine tiefsten Lebensregeln (Lebensfallen). Vergleiche logische Beweise und formuliere gesunde Annahmen.</p>
+                                
+                                <div id="schema-beliefs-list" class="schema-beliefs-list" style="display: flex; flex-direction: column; gap: 1rem; max-height: 480px; overflow-y: auto; padding-right: 0.5rem;">
+                                    <!-- JS populated -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: Add Schema Form -->
+                        <div class="glass-card">
+                            <h2 data-l10n="schema_btn_add" style="color: var(--accent-teal); margin-bottom: 1.5rem;">Neuen Glaubenssatz analysieren</h2>
+                            <form id="add-schema-form" onsubmit="app.addCoreBelief(event)">
+                                <div class="form-group">
+                                    <label class="form-label" data-l10n="schema_lbl_name" for="schema-input-name">Name des Glaubenssatzes / Schema (z. B. 'Ich bin unzulänglich')</label>
+                                    <input type="text" id="schema-input-name" class="form-control" placeholder="z.B. Ich bin nicht gut genug" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" data-l10n="schema_lbl_strength" for="schema-input-strength">Wie stark glaubst du aktuell daran? (0-100%)</label>
+                                    <div style="display: flex; align-items: center; gap: 1rem;">
+                                        <input type="range" id="schema-input-strength" class="form-range" min="0" max="100" value="80" style="flex:1;" oninput="document.getElementById('schema-strength-val').innerText = this.value + '%'">
+                                        <span id="schema-strength-val" style="font-weight:700; color: var(--accent-teal); width: 45px; text-align:right;">80%</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" data-l10n="schema_lbl_evidence_pro" for="schema-input-pro">Beweise, die dafür sprechen (Warum dein Kopf das glaubt)</label>
+                                    <textarea id="schema-input-pro" class="form-control" rows="2" placeholder="Welche Erlebnisse unterstützen diesen Glaubenssatz?" required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" data-l10n="schema_lbl_evidence_con" for="schema-input-con">Beweise, die dagegen sprechen (Objektive Tatsachen & Gegenbeweise)</label>
+                                    <textarea id="schema-input-con" class="form-control" rows="2" placeholder="Welche objektiven Fakten sprechen dagegen?" required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" data-l10n="schema_lbl_healthy" for="schema-input-healthy">Gesunde Regel (Was sagt deine gesunde, weise Erwachsenen-Stimme?)</label>
+                                    <textarea id="schema-input-healthy" class="form-control" rows="2" placeholder="Wie lautet eine gesündere, realistischere Regel?" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                                    <span data-l10n="schema_save">Glaubenssatz speichern 💾</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. ACT WERTE-KOMPASS SUBTAB CONTENT -->
+                <div id="values-subtab-content" class="subtab-content">
+                    <div class="glass-card" style="margin-bottom: 2rem;">
+                        <h2 data-l10n="values_title" style="color: var(--accent-gold); margin-bottom: 0.5rem;">Werte-Kompass (ACT)</h2>
+                        <p data-l10n="values_desc" style="font-size: 0.95rem; color: var(--text-secondary);">Angst macht uns starr. Definiere, was dir in den Kernbereichen deines Lebens wichtig ist, und nimm dir eine kleine Handlung vor.</p>
+                    </div>
+
+                    <div class="grid-2">
+                        <!-- Relationships Area -->
+                        <div class="glass-card value-area-card" style="border-top: 4px solid var(--accent-lavender); display: flex; flex-direction: column; justify-content: space-between;">
+                            <div>
+                                <h3 data-l10n="values_cat_relations" style="color: var(--accent-lavender); margin-bottom: 0.5rem;">Beziehungen & Familie</h3>
+                                <div class="form-group">
+                                    <textarea id="value-input-relationships" class="form-control" rows="2" data-l10n="values_placeholder" placeholder="Was ist dir in diesem Bereich besonders wichtig?" onchange="app.saveValueCommit('relationships', this.value)"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group" style="margin-top: 1rem;">
+                                <label class="form-label" data-l10n="values_action_lbl" style="font-weight: 700; color: var(--accent-lavender);">Mein konkreter Schritt für HEUTE:</label>
+                                <input type="text" id="value-action-relationships" class="form-control" data-l10n="values_action_placeholder" placeholder="z. B. 10 Min. anrufen oder spazieren gehen" onchange="app.saveValueAction('relationships', this.value)">
+                            </div>
+                        </div>
+
+                        <!-- Health & Self-Care Area -->
+                        <div class="glass-card value-area-card" style="border-top: 4px solid var(--accent-teal); display: flex; flex-direction: column; justify-content: space-between;">
+                            <div>
+                                <h3 data-l10n="values_cat_health" style="color: var(--accent-teal); margin-bottom: 0.5rem;">Gesundheit & Selbstfürsorge</h3>
+                                <div class="form-group">
+                                    <textarea id="value-input-health" class="form-control" rows="2" data-l10n="values_placeholder" placeholder="Was ist dir in diesem Bereich besonders wichtig?" onchange="app.saveValueCommit('health', this.value)"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group" style="margin-top: 1rem;">
+                                <label class="form-label" data-l10n="values_action_lbl" style="font-weight: 700; color: var(--accent-teal);">Mein konkreter Schritt für HEUTE:</label>
+                                <input type="text" id="value-action-health" class="form-control" data-l10n="values_action_placeholder" placeholder="z. B. 10 Min. anrufen oder spazieren gehen" onchange="app.saveValueAction('health', this.value)">
+                            </div>
+                        </div>
+
+                        <!-- Growth Area -->
+                        <div class="glass-card value-area-card" style="border-top: 4px solid var(--accent-gold); display: flex; flex-direction: column; justify-content: space-between;">
+                            <div>
+                                <h3 data-l10n="values_cat_growth" style="color: var(--accent-gold); margin-bottom: 0.5rem;">Karriere & Wachstum</h3>
+                                <div class="form-group">
+                                    <textarea id="value-input-growth" class="form-control" rows="2" data-l10n="values_placeholder" placeholder="Was ist dir in diesem Bereich besonders wichtig?" onchange="app.saveValueCommit('growth', this.value)"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group" style="margin-top: 1rem;">
+                                <label class="form-label" data-l10n="values_action_lbl" style="font-weight: 700; color: var(--accent-gold);">Mein konkreter Schritt für HEUTE:</label>
+                                <input type="text" id="value-action-growth" class="form-control" data-l10n="values_action_placeholder" placeholder="z. B. 10 Min. anrufen oder spazieren gehen" onchange="app.saveValueAction('growth', this.value)">
+                            </div>
+                        </div>
+
+                        <!-- Mindfulness & Calm Area -->
+                        <div class="glass-card value-area-card" style="border-top: 4px solid var(--accent-pink); display: flex; flex-direction: column; justify-content: space-between;">
+                            <div>
+                                <h3 data-l10n="values_cat_mindfulness" style="color: var(--accent-pink); margin-bottom: 0.5rem;">Achtsamkeit & Ruhe</h3>
+                                <div class="form-group">
+                                    <textarea id="value-input-mindfulness" class="form-control" rows="2" data-l10n="values_placeholder" placeholder="Was ist dir in diesem Bereich besonders wichtig?" onchange="app.saveValueCommit('mindfulness', this.value)"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group" style="margin-top: 1rem;">
+                                <label class="form-label" data-l10n="values_action_lbl" style="font-weight: 700; color: var(--accent-pink);">Mein konkreter Schritt für HEUTE:</label>
+                                <input type="text" id="value-action-mindfulness" class="form-control" data-l10n="values_action_placeholder" placeholder="z. B. 10 Min. anrufen oder spazieren gehen" onchange="app.saveValueAction('mindfulness', this.value)">
                             </div>
                         </div>
                     </div>
