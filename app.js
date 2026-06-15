@@ -20,12 +20,12 @@ const L10N_DICT = {
         nav_sos: "SOS Hilfe",
         nav_coach: "Gedanken-Coach",
         coach_title: "Gedanken-Coach (CBT)",
-        coach_subtitle: "Hinterfrage automatische Gedanken offline und im sicheren, Sokratischen Dialog.",
+        coach_subtitle: "Kognitive Restrukturierung automatischer Gedanken mittels sokratischer Dialogführung.",
         coach_name: "Oasen-Begleiter",
         coach_status_online: "Hinterfragt mit dir Gedanken",
         coach_send_btn: "Senden",
         coach_archive_title: "Umformulierte Gedanken",
-        coach_archive_desc: "Deine befreiten Sichtweisen als Schutzschild gegen übermäßige Sorgen.",
+        coach_archive_desc: "Konsolidierte kognitive Alternativen zur Reduktion perseverativer Gedankenmuster.",
         coach_history_empty: "Noch keine Gedanken umformuliert.",
         coach_delete_btn: "Löschen",
         coach_send_defusion_btn: "Treiben lassen 🍃",
@@ -35,7 +35,7 @@ const L10N_DICT = {
         greeting_afternoon: "Schönen Nachmittag",
         greeting_evening: "Guten Abend",
         greeting_night: "Gute Nacht",
-        subtitle: "Nimm dir einen Moment Zeit, um durchzuatmen. Du bist hier in Sicherheit.",
+        subtitle: "Klinisch fundierte Werkzeuge zur Regulation des autonomen Nervensystems und metakognitiven Restrukturierung.",
         
         daily_reminder: "Tägliche Genesungs-Mitteilung",
         checkin_title: "Check-In",
@@ -61,10 +61,10 @@ const L10N_DICT = {
         advisor_evaluating: "Analysiere deinen Genesungsverlauf...",
         
         parking_title: "Sorgen-Parkplatz & Sorgenzeit",
-        parking_subtitle: "Sorgenaufschub ist eine klinisch wirksame CBT-Methode. Parke deine Gedanken tagsüber hier, um das ständige Grübeln zu stoppen.",
+        parking_subtitle: "Strategischer Sorgenaufschub (MCT). Begrenze die kognitive Verarbeitungszeit von Metasorgen zur Stärkung der exekutiven Aufmerksamkeitskontrolle.",
         parking_box_title: "Neue Sorge parken",
         parking_label: "Was beschäftigt deinen Geist gerade?",
-        parking_placeholder: "Schreibe die Sorge auf. Danach ist sie hier sicher abgelegt, sodass du dich dem Hier und Jetzt widmen kannst.",
+        parking_placeholder: "Dokumentiere den antizipierten Sorgen-Trigger für die spätere metakognitive Analyse.",
         parking_submit: "Sorge sicher parken 📥",
         parking_overview: "Parkplatz-Übersicht",
         parking_start_btn: "Sorgenzeit starten 🌅",
@@ -81,14 +81,14 @@ const L10N_DICT = {
         worry_action_placeholder: "z. B. E-Mail senden, Termin vereinbaren...",
         worry_action_save: "Schritt speichern & Sorge lösen",
         worry_defusion_title: "Kognitive Entschärfung",
-        worry_defusion_desc: "Da du dieses Problem im Moment nicht beeinflussen kannst, hilft es uns nicht, weiterzugrübeln. Lass die Sorge symbolisch los.",
+        worry_defusion_desc: "Da dieser Gedanke unkontrollierbare Variablen betrifft, wird er durch kognitive Entschärfung (Defusion) dissoziiert.",
         worry_defusion_release: "Sorge ins Universum loslassen ✨",
         worry_complete_title: "Sorgenzeit erfolgreich beendet!",
-        worry_complete_desc: "Hervorragend. Du hast alle deine geparkten Sorgen konstruktiv bewertet, Aktionspläne gefasst oder dich darin geübt, Unkontrollierbares loszulassen. Dein Geist kann sich jetzt wieder entspannen.",
+        worry_complete_desc: "Sorgenzeit beendet. Du hast deine kognitive Belastung strukturiert bewertet, Lösungspläne konsolidiert oder dich in metakognitiver Loslösung geübt.",
         worry_complete_btn: "Zurück zum Sorgen-Parkplatz",
         
         exp_title: "Verhaltensexperimente",
-        exp_subtitle: "Dismantle deine Angst, indem du katastrophale Vorhersagen aktiv überprüfst und dein Bedrohungssystem im Gehirn neu trainierst.",
+        exp_subtitle: "Planung hypothesengeleiteter Verhaltensexperimente zur empirischen Falsifizierung dysfunktionaler Annahmen.",
         exp_active: "Aktive Verhaltensexperimente",
         exp_new_btn: "Neues Experiment planen 🧪",
         exp_empty: "Keine aktiven Experimente. Starte eins, um deine Ängste aktiv auf die Probe zu stellen!",
@@ -96,7 +96,7 @@ const L10N_DICT = {
         exp_no_completed: "Noch keine abgeschlossenen Experimente vorhanden.",
         
         breath_title: "Atem-Kohärenz & Vagus-Bremse",
-        breath_subtitle: "Physiologische Steuerung deines Nervensystems. Reguliere körperliche Angstsymptome wie Herzrasen und Engegefühl.",
+        breath_subtitle: "Modulation der sympathovagalen Balance. Optimiere die Herzfrequenzvariabilität (HRV) und fördere die respiratorische Sinusarrhythmie.",
         breath_pattern_lbl: "Atem-Muster",
         breath_duration_lbl: "Sitzungsdauer",
         breath_coherence_lbl: "Physiologische Kohärenz",
@@ -109,7 +109,7 @@ const L10N_DICT = {
         breath_exhale: "Ausatmen",
         
         somatic_title: "Körper-Anker (Somatic)",
-        somatic_subtitle: "Aktiviere den Vagusnerv durch gezielte, kleine körperliche Reize. Das signalisiert deinem Gehirn sofortige physische Sicherheit.",
+        somatic_subtitle: "Direkte Stimulation des parasympathischen Nervensystems zur Absenkung des physiologischen Arousal-Niveaus.",
         somatic_select_lbl: "Wähle eine Somatische Übung:",
         somatic_vagus_opt: "Vagus-Augen-Shifting (Blick-Entlastung)",
         somatic_sigh_opt: "Physiologischer Seufzer (Lungenbelüftung)",
@@ -122,7 +122,7 @@ const L10N_DICT = {
         tapping_stop_btn: "Abbrechen",
         
         vagus_title: "Vagus-Blick-Entlastung",
-        vagus_desc: "1. Halte deinen Kopf ganz gerade.<br>2. Folge mit den Augen dem wandernden Punkt ganz nach rechts.<br>3. Halte den Blick dort für 30 Sekunden, bis ein automatisches Seufzen oder Gähnen einsetzt.<br>4. Wiederhole das Gleiche auf der linken Seite.",
+        vagus_desc: "Induktion des okulokardialen Reflexes zur Vagusstimulation (Polyvagal-Theorie).<br><br>1. Halte deinen Kopf gerade.<br>2. Folge mit den Augen dem wandernden Punkt ganz nach rechts.<br>3. Halte den Blick dort für 30 Sekunden, bis ein automatisches Seufzen oder Gähnen einsetzt.<br>4. Wiederhole das Gleiche auf der linken Seite.",
         vagus_start: "Übung starten",
         vagus_stop: "Übung beenden",
         vagus_look_right: "Blicke ganz nach RECHTS und halte deinen Kopf gerade",
@@ -131,7 +131,7 @@ const L10N_DICT = {
         vagus_done: "Übung beendet. Spürst du ein Gähnen, Seufzen oder Schlucken? Das ist das Signal der Entspannung!",
         
         sigh_title: "Physiologischer Seufzer",
-        sigh_desc: "Dies ist der schnellste biologische Weg des Körpers, Kohlendioxid abzubauen und den Herzschlag zu drosseln.<br><br>1. Atme tief durch die Nase ein.<br>2. Atme am Ende noch einmal ganz kurz und fest zusätzlich ein (um die Lungenbläschen voll aufzublähen).<br>3. Atme extrem langsam und vollständig durch den Mund aus. Wiederhole dies 3-mal.",
+        sigh_desc: "Physiologischer Doppelseufzer zur schnellen Hyperkapnie-Kompensation und pulmonalen Alveolar-Inflation.<br><br>1. Atme tief durch die Nase ein.<br>2. Atme am Ende noch einmal ganz kurz und fest zusätzlich ein (um die Lungenbläschen voll aufzublähen).<br>3. Atme extrem langsam und vollständig durch den Mund aus. Wiederhole dies 3-mal.",
         
         grounding_title: "Sensorische Erdung",
         grounding_desc: "Klicke die Sinne durch und benenne Objekte in deiner Umgebung, um dein Bewusstsein ins Hier und Jetzt zurückzubringen.",
@@ -147,9 +147,9 @@ const L10N_DICT = {
         grounding_btn_taste: "Schmecken",
         
         defusion_title: "Gedanken-Strom (ACT Defusion)",
-        defusion_subtitle: "Entschärfe deine Ängste. Betrachte deine Gedanken mit gesunder Distanz als vorbeifließende Blätter oder Sterne.",
+        defusion_subtitle: "Förderung der psychologischen Flexibilität durch Defusions-Techniken (ACT). Trenne deine Identität von kognitiven Repräsentationen.",
         defusion_box_title: "Gedanken entlassen",
-        defusion_box_desc: "Schreibe eine Sorge auf, die in deinem Kopf klebt. Setze sie auf ein Objekt und beobachte achtsam, wie sie davonschweift. Sie gehört nicht zu dir.",
+        defusion_box_desc: "Visualisierung der kognitiven De-Identifikation. Beobachte den Gedanken als flüchtiges mentales Phänomen ohne emotionale Identifikation.",
         defusion_label: "Festsitzender Gedanke",
         defusion_placeholder: "z. B. Ich werde das nicht schaffen",
         defusion_submit: "Treiben lassen 🍃",
@@ -158,23 +158,23 @@ const L10N_DICT = {
         defusion_theme_space: "Weltall (Sternschnuppen) 🌠",
         
         knowledge_title: "Wissens-Oase (Psychoedukation)",
-        knowledge_subtitle: "Verstehe die Biologie deiner Angst. Wissen entzaubert das Bedrohungsgefühl und macht dich handlungsfähig.",
-        mod1_title: "Modul 1: Was ist GAD?",
+        knowledge_subtitle: "Fortgeschrittene Psychoedukation. Vertiefte Einsichten in die Neurobiologie, Systemtherapie und autonome Steuerung.",
+        mod1_title: "Modul 1: Neurobiologie der generalisierten Angst",
         mod1_desc: "Verstehe das Prinzip des chronischen Alarmzustands in deinem Gehirn und warum Sorgen kein wirksames Schutzschild sind.",
-        mod2_title: "Modul 2: Die Sorgen-Falle",
+        mod2_title: "Modul 2: Kognitive Perseveration & Metakognition",
         mod2_desc: "Erkenne, warum Angsterwartungen haften bleiben, was Metasorgen sind und wie wir gedankliche Schleifen durchbrechen.",
-        mod3_title: "Modul 3: Der Vagusnerv",
+        mod3_title: "Modul 3: Vegetatives Nervensystem & Polyvagal-Regulation",
         mod3_desc: "Lerne die physiologische Bremse deines Körpers kennen. Erfahre alles über Herzfrequenzvariabilität (HRV) und Resonanz.",
-        mod4_title: "Modul 4: Rückfall-Prävention",
+        mod4_title: "Modul 4: Adaptives Coping & Extinktionskonsolidierung",
         mod4_desc: "Heilung verläuft wellenförmig. Lerne, wie du mit schwierigen Tagen umgehst und einen nachhaltigen Notfallplan erstellst.",
-        mod5_title: "Modul 5: Kognitive Arbeit",
+        mod5_title: "Modul 5: Kognitive Restrukturierung & Distanzierung",
         mod5_desc: "Entlarve negative Denkmuster, lerne kognitive Verzerrungen zu hinterfragen und ausgewogene Perspektiven zu entwickeln.",
-        mod6_title: "Modul 6: Anderen helfen",
+        mod6_title: "Modul 6: Interpersonelle Co-Regulation & Systemisches Coping",
         mod6_desc: "Lerne, wie du Freunde, Familie oder Partner in Angstphasen unterstützen kannst und wie ein gesundes Co-Coping aussieht.",
         mod_read_btn: "Modul lesen 📖",
         
         tracker_title: "Genesungs-Tracker & Diagnostik",
-        tracker_subtitle: "Verfolge deine Fortschritte klinisch fundiert. Miss wöchentlich deine Angstlevel nach der standardisierten GAD-7 Skala.",
+        tracker_subtitle: "Verlaufsdiagnostik auf Basis der GAD-7 (Generalized Anxiety Disorder-7) zur Quantifizierung der Symptombelastung.",
         tracker_chart_title: "Wöchentliche GAD-7 Auswertung",
         tracker_btn: "GAD-7 Test starten 📋",
         tracker_history_title: "Test-Historie",
@@ -188,19 +188,19 @@ const L10N_DICT = {
         
         settings_title: "Einstellungen",
         settings_worry_lbl: "Uhrzeit für deine tägliche Sorgenzeit:",
-        settings_worry_sub: "Plane täglich 15 Minuten ein, in denen du ungestört bist.",
-        settings_mixer_title: "Klang-Mixer (Lautstärke Ambient-Synthesizer)",
-        settings_rain_lbl: "Regen-Prasseln (Pink Noise Filter)",
-        settings_waves_lbl: "Meeresrauschen (Nervensystem-Wiege)",
-        settings_wind_lbl: "Waldwind (Böen-Simulation)",
-        settings_chimes_lbl: "Windspiele (Pentatonische FM-Bells) 🔔",
-        settings_brown_lbl: "Braunes Rauschen (Tiefen-Frequenzen)",
+        settings_worry_sub: "Plane ein tägliches Zeitfenster zur Einschränkung perseverativer Kognitionsschleifen ein.",
+        settings_mixer_title: "Modulation des akustischen Arousals (Synthesizer-Pegel)",
+        settings_rain_lbl: "Rosa Rauschen (Bandpass-Pink-Noise-Simulation)",
+        settings_waves_lbl: "Niederfrequente Oszillation (Kardiale Resonanz-Induktion)",
+        settings_wind_lbl: "Stochastischer Modulations-Rauschfilter (Waldwind)",
+        settings_chimes_lbl: "Pentatonische FM-Glockensignale (Mikro-Achtsamkeit) 🔔",
+        settings_brown_lbl: "Braunes Rauschen (Integration tiefer Spektren)",
         settings_save_btn: "Speichern",
         settings_reset_btn: "Daten löschen",
         settings_export_btn: "Therapeuten-Export (JSON) 📤",
         
         sos_title: "NOTFALL & ERDUNG",
-        sos_subtitle: "Die Angst fühlt sich bedrohlich an, aber sie ist ein temporäres Gefühl. Du bist sicher. Lass uns dich zurückholen.",
+        sos_subtitle: "Akutes hyperdynamisches Arousal. Nutze gezielte somatische Interventionen zur Aktivierung der parasympathischen Vagus-Bremse.",
         sos_vagus_title: "Sofortiger Vagus-Reset: Der Doppelseufzer",
         sos_vagus_desc: "1. Atme durch die Nase **tief ein**.<br>2. Atme sofort noch einmal **hinterher** (maximales Lungenvolumen).<br>3. Blase die Luft **extrem langsam** durch den Mund aus.<br><br>*Wiederhole das genau 3-mal jetzt.*",
         sos_breath_btn: "Geführte Atem-Kohärenz starten 🌀",
@@ -209,8 +209,8 @@ const L10N_DICT = {
         sos_helpline_2: "Nummer gegen Kummer (Kinder/Jugend)",
         sos_helpline_3: "Info-Telefon Depression",
         sos_helpline_4: "Medizinischer Notdienst",
-        gad_title: "Klinischer GAD-7 Fragebogen",
-        gad_subtitle: "Wie oft fühltest du dich in den **letzten zwei Wochen** durch die folgenden Beschwerden beeinträchtigt?",
+        gad_title: "Standardisierte GAD-7 Verlaufsdiagnostik",
+        gad_subtitle: "Erfassung des Schweregrads der generalisierten Angstsymptomatik über das **2-Wochen-Intervall**.",
         gad_q1: "1. Gefühle von Nervosität, Angst oder Anspannung",
         gad_q2: "2. Unfähigkeit, Sorgen zu stoppen oder zu kontrollieren",
         gad_q3: "3. Übermäßige Sorgen über verschiedene Dinge",
@@ -271,7 +271,30 @@ const L10N_DICT = {
         values_action_lbl: "Mein konkreter Schritt für HEUTE:",
         values_action_placeholder: "z. B. 10 Min. anrufen oder spazieren gehen",
         values_save: "Werte-Schritt sichern 🎯",
-        values_dashboard_card: "Heutige Werte-Schritte"
+        values_dashboard_card: "Heutige Werte-Schritte",
+
+        // New localized additions from index.html
+        dashboard_mct_desc: "Metakognitives Training (MCT): Aufmerksamkeitslenkung & strukturierter Sorgenaufschub.",
+        dashboard_schemas_desc: "Schemaanalyse: Exploration tiefsitzender Glaubenssätze und dysfunktionaler Kognitionen.",
+        dashboard_values_desc: "Werte-Ausrichtung (ACT): Strukturierte Implementierung wertebasierter Verhaltenscommitments.",
+        tapping_start_btn: "Klopf-Sitzung starten 🧘‍♀️",
+        tapping_point_sidehand: "Handkante (Karate-Punkt)",
+        defusion_max_chars: "Max. 35 Zeichen",
+        mct_att_left: "LINKS",
+        mct_att_center: "MITTE",
+        mct_att_right: "RECHTS",
+        exp_new_title: "Verhaltensexperiment planen",
+        exp_prediction_lbl: "1. Rationale Antizipation des Bedrohungsszenarios (Hypothese):",
+        exp_probability_lbl: "Subjektive Eintrittswahrscheinlichkeit (0–100%):",
+        exp_severity_lbl: "Antizipierte emotionale Belastung (1–10):",
+        exp_design_lbl: "2. Experimentelles Setup zur Falsifizierung (Interventionsdesign):",
+        exp_complete_title_modal: "Empirische Auswertung & Integration",
+        exp_fear_was: "Antizipierte Bedrohung:",
+        exp_outcome_lbl: "1. Empirischer Befund (Was trat tatsächlich ein?):",
+        exp_learning_lbl: "2. Kognitive Anpassung & neuroplastische Integration (Erkenntnis):",
+        exp_save_btn: "Erkenntnisse im Langzeitgedächtnis sichern 💾",
+        psy_back: "Zurück",
+        psy_next: "Weiter"
     },
     ar: {
         logo: "واحة الهدوء",
@@ -286,12 +309,12 @@ const L10N_DICT = {
         nav_sos: "مساعدة SOS emergency",
         nav_coach: "مرشد الأفكار",
         coach_title: "مرشد الأفكار (العلاج السلوكي المعرفي)",
-        coach_subtitle: "حاور وشكك في أفكارك التلقائية بأمان وخصوصية تامة عبر الحوار السكراتي.",
+        coach_subtitle: "إعادة الهيكلة المعرفية للأفكار التلقائية عبر الحوار السكراتي الموجه.",
         coach_name: "مرشد الواحة",
         coach_status_online: "يحاورك لتفكيك الأفكار السلبية",
         coach_send_btn: "إرسال",
         coach_archive_title: "الأفكار المُعاد صياغتها",
-        coach_archive_desc: "أفكارك المتوازنة الجديدة كدرع واقٍ ضد القلق والتوتر.",
+        coach_archive_desc: "البدائل المعرفية المدمجة لتقليل أنماط التفكير المفرط.",
         coach_history_empty: "لم يتم إعادة صياغة أي أفكار بعد.",
         coach_delete_btn: "حذف",
         coach_send_defusion_btn: "دعها تطفو 🍃",
@@ -301,7 +324,7 @@ const L10N_DICT = {
         greeting_afternoon: "مساء الخير",
         greeting_evening: "مساء الخير",
         greeting_night: "ليلة سعيدة",
-        subtitle: "خذ لحظة للتنفس بعمق. أنت في أمان هنا.",
+        subtitle: "أدوات سريرية متقدمة لتنظيم الجهاز العصبي الذاتي وإعادة الهيكلة الميتا-معرفية.",
         
         daily_reminder: "رسالة التعافي اليومية",
         checkin_title: "تسجيل الحالة",
@@ -327,10 +350,10 @@ const L10N_DICT = {
         advisor_evaluating: "جاري تحليل مسار تعافيك...",
         
         parking_title: "موقف المخاوف ووقت القلق",
-        parking_subtitle: "تأجيل القلق هو أسلوب مثبت علمياً في العلاج المعرفي السلوكي (CBT). اركن أفكارك هنا نهاراً لتوقيف التفكير المفرط المستمر.",
+        parking_subtitle: "تأجيل القلق الاستراتيجي (MCT). الحد من وقت المعالجة المعرفية للقلق الميتا-معرفي لتعزيز التحكم التنفيذي في الانتباه.",
         parking_box_title: "ركن خوف جديد",
         parking_label: "ما الذي يشغل بالك الآن؟",
-        parking_placeholder: "اكتب ما يقلقك هنا. بمجرد كتابته، سيتم حفظه بأمان لكي تتمكن من العيش في الحاضر والتركيز على لحظتك الحالية.",
+        parking_placeholder: "قم بتوثيق محفز القلق المتوقع للتحليل الميتا-معرفي اللاحق.",
         parking_submit: "اركن الخوف بأمان 📥",
         parking_overview: "نظرة عامة على الموقف",
         parking_start_btn: "ابدأ وقت القلق 🌅",
@@ -347,14 +370,14 @@ const L10N_DICT = {
         worry_action_placeholder: "مثال: إرسال بريد إلكتروني، حجز موعد...",
         worry_action_save: "احفظ الخطوة وحل الخوف",
         worry_defusion_title: "فك الارتباط المعرفي",
-        worry_defusion_desc: "بما أنه لا يمكنك التأثير على هذه المشكلة في الوقت الحالي، فلن يفيدك الاستمرار في التفكير فيها. حرر هذا الخوف بشكل رمزي.",
+        worry_defusion_desc: "بما أن هذه الفكرة تتعلق بمتغيرات غير قابلة للتحكم، يتم فك الارتباط المعرفي بها (Defusion).",
         worry_defusion_release: "أطلق الخوف إلى الكون ✨",
         worry_complete_title: "انتهى وقت القلق بنجاح!",
-        worry_complete_desc: "ممتاز. لقد قمت بتقييم مخاوفك المركونة بشكل بناء، أو وضعت خطط عمل، أو تدربت على تحرير الأشياء التي لا يمكنك التحكم بها. يمكن لعقلك الاسترخاء الآن.",
+        worry_complete_desc: "انتهى وقت القلق. لقد قمت بتقييم العبء المعرفي بشكل منظم، أو دمجت خطط العمل، أو تدربت على فك الارتباط الميتا-معرفي.",
         worry_complete_btn: "العودة إلى موقف المخاوف",
         
         exp_title: "تجارب سلوكية",
-        exp_subtitle: "فكك مخاوفك عبر اختبار توقعاتك المقلقة عملياً وإعادة تدريب نظام استشعار المخاطر في دماغك.",
+        exp_subtitle: "التخطيط لتجارب سلوكية قائمة على الفرضيات للتفنيد التجريبي للافتراضات غير الفعالة.",
         exp_active: "التجارب السلوكية النشطة",
         exp_new_btn: "خطط لتجربة جديدة 🧪",
         exp_empty: "لا توجد تجارب نشطة. ابدأ تجربة لاختبار وتفنيد مخاوفك!",
@@ -362,7 +385,7 @@ const L10N_DICT = {
         exp_no_completed: "لا توجد تجارب مكتملة بعد.",
         
         breath_title: "اتساق التنفس ومكابح العصب الحائر",
-        breath_subtitle: "التحكم العضوي في جهازك العصبي. نظّم أعراض القلق الجسدية مثل تسارع ضربات القلب وضيق التنفس.",
+        breath_subtitle: "تعديل التوازن السمبتاوي والباراسمبتاوي. تحسين تقلب معدل ضربات القلب (HRV) وتعزيز اضطراب النظم الجيبي التنفسي.",
         breath_pattern_lbl: "نمط التنفس",
         breath_duration_lbl: "مدة الجلسة",
         breath_coherence_lbl: "الاتساق الفسيولوجي",
@@ -375,7 +398,7 @@ const L10N_DICT = {
         breath_exhale: "زفير",
         
         somatic_title: "مرساة الجسد (تمارين جسدية)",
-        somatic_subtitle: "نشّط العصب الحائر من خلال تحفيزات جسدية صغيرة ومحددة. هذا يرسل إشارة فورية للأمان إلى دماغك.",
+        somatic_subtitle: "التحفيز المباشر للجهاز العصبي الباراسمبتاوي لخفض مستوى الاستثارة الفسيولوجية.",
         somatic_select_lbl: "اختر تمريناً جسدياً:",
         somatic_vagus_opt: "حركة العين للعصب الحائر (تخفيف النظر)",
         somatic_sigh_opt: "التنهد الفسيولوجي (تهوية الرئتين)",
@@ -388,7 +411,7 @@ const L10N_DICT = {
         tapping_stop_btn: "إلغاء",
         
         vagus_title: "حركة العين للعصب الحائر",
-        vagus_desc: "1. حافظ على استقامة رأسك تماماً.<br>2. اتبع النقطة المتحركة بعينيك فقط إلى أقصى اليمين.<br>3. ثبت نظرك هناك لمدة 30 ثانية حتى تشعر بتنهد أو تثاؤب تلقائي.<br>4. كرر نفس العملية على الجانب الأيسر.",
+        vagus_desc: "تحفيز المنعكس العيني القلبي لتنشيط العصب الحائر (النظرية البولي-فيغالية).<br><br>1. حافظ على استقامة رأسك تماماً.<br>2. اتبع النقطة المتحركة بعينيك فقط إلى أقصى اليمين.<br>3. ثبت نظرك هناك لمدة 30 ثانية حتى تشعر بتنهد أو تثاؤب تلقائي.<br>4. كرر نفس العملية على الجانب الأيسر.",
         vagus_start: "ابدأ التمرين",
         vagus_stop: "إنهاء التمرين",
         vagus_look_right: "انظر إلى أقصى اليمين وحافظ على رأسك مستقيماً",
@@ -397,7 +420,7 @@ const L10N_DICT = {
         vagus_done: "انتهى التمرين. هل تشعر بالتثاؤب، التنهد، أو الابتلاع؟ هذه إشارة استرخاء جهازك العصبي!",
         
         sigh_title: "التنهد الفسيولوجي",
-        sigh_desc: "هذه هي أسرع طريقة بيولوجية للجسم للتخلص من ثاني أكسيد الكربون الزائد وإبطاء معدل ضربات القلب.<br><br>1. خذ شهيقاً عميقاً من الأنف.<br>2. خذ شهيقاً ثانياً قصيراً جداً وسريعاً في النهاية (لتوسيع الحويصلات الهوائية بالكامل).<br>3. ازفر ببطء شديد وتام من الفم. كرر هذا 3 مرات متتالية.",
+        sigh_desc: "التنهد الفسيولوجي المزدوج للتعويض السريع لفرط ثنائي أكسيد الكربون وتوسيع الحويصلات الرئوية.<br><br>1. خذ شهيقاً عميقاً من الأنف.<br>2. خذ شهيقاً ثانياً قصيراً جداً وسريعاً في النهاية (لتوسيع الحويصلات الهوائية بالكامل).<br>3. ازفر ببطء شديد وتام من الفم. كرر هذا 3 مرات متتالية.",
         
         grounding_title: "التأريض الحسي",
         grounding_desc: "اضغط على الحواس وسمّ الأشياء في محيطك لإعادة وعيك إلى الحاضر والواقع الحالي.",
@@ -413,9 +436,9 @@ const L10N_DICT = {
         grounding_btn_taste: "تذوق",
         
         defusion_title: "سيل الأفكار (ACT Defusion)",
-        defusion_subtitle: "فك ارتباطك بمخاوفك. راقب أفكارك بمسافة صحية كأوراق شجر تطفو أو نجوم تسير في الفضاء.",
+        defusion_subtitle: "تعزيز المرونة النفسية عبر تقنيات فك الارتباط (ACT). افصل هويتك عن تمثيلاتك المعرفية.",
         defusion_box_title: "تحرير الفكرة",
-        defusion_box_desc: "اكتب فكرة مقلقة ملتصقة برأسك. ضعها على مجسم وراقبها وهي تبتعد بسلام. إنها ليست أنت، بل فكرة عابرة.",
+        defusion_box_desc: "تصور فك التماهي المعرفي. راقب الفكرة كظاهرة ذهنية عابرة دون التماهي العاطفي معها.",
         defusion_label: "فكرة ملتصقة بعقلك",
         defusion_placeholder: "مثال: لن أتمكن من النجاح في هذا",
         defusion_submit: "دعها تطفو 🍃",
@@ -424,23 +447,23 @@ const L10N_DICT = {
         defusion_theme_space: "الفضاء (شهب عابرة) 🌠",
         
         knowledge_title: "واحة المعرفة (التثقيف النفسي)",
-        knowledge_subtitle: "افهم بيولوجيا القلق لديك. المعرفة تفكك وتهزم مشاعر الخوف والتهديد وتجعلك قادراً على التصرف.",
-        mod1_title: "الدرس 1: ما هو القلق العام (GAD)؟",
+        knowledge_subtitle: "تثقيف نفسي متقدم. رؤى معمقة في علم الأعصاب، العلاج الجهازي، والتحكم الذاتي.",
+        mod1_title: "الدرس 1: علم الأعصاب للقلق العام",
         mod1_desc: "افهم مبدأ حالة الإنذار المزمنة في دماغك ولماذا لا يعتبر القلق درعاً حقيقياً لحمايتك.",
-        mod2_title: "الدرس 2: فخ القلق المفرط",
+        mod2_title: "الدرس 2: التفكير المفرط والبيانات الميتا-معرفية",
         mod2_desc: "تعرف على سبب التصاق توقعات الخوف، ماهية القلق بشأن القلق، وكيفية تفكيك الحلقات الفكرية المفرطة.",
-        mod3_title: "الدرس 3: العصب الحائر",
+        mod3_title: "الدرس 3: الجهاز العصبي والتنظيم البولي-فيغالي",
         mod3_desc: "تعرف على فرامل الاسترخاء العضوية في جسمك. اكتشف كل شيء عن تقلب معدل ضربات القلب (HRV) والاتساق.",
-        mod4_title: "الدرس 4: الوقاية من الانتكاسات",
+        mod4_title: "الدرس 4: التكيف والدمج التجريبي",
         mod4_desc: "التعافي يسير بشكل موجي وليس خطاً مستقيماً. تعلم كيفية التعامل مع الأيام الصعبة وإعداد خطة طوارئ مستدامة.",
-        mod5_title: "الدرس 5: العمل المعرفي",
+        mod5_title: "الدرس 5: إعادة الهيكلة والتفكيك المعرفي",
         mod5_desc: "افحص أنماط التفكير السلبية، وتعلم كيفية التشكيك في التشوهات المعرفية وتطوير وجهات نظر متوازنة.",
-        mod6_title: "الدرس 6: مساعدة الآخرين",
+        mod6_title: "الدرس 6: التنظيم المشترك وديناميكيات الدعم الجماعي",
         mod6_desc: "تعلم كيف يمكنك دعم الأصدقاء أو العائلة أو الشريك أثناء نوبات القلق وكيف يبدو الدعم النفسي المشترك والصحي.",
         mod_read_btn: "اقرأ الدرس 📖",
         
         tracker_title: "مستوى التقدم والتشخيص",
-        tracker_subtitle: "تتبع مسار تعافيك بأسلوب علمي سريري. قس مستوى قلقك أسبوعياً بناءً على مقياس GAD-7 العالمي المعتمد.",
+        tracker_subtitle: "تشخيص المتابعة بناءً على مقياس GAD-7 لتحديد كمية العبء العرضي.",
         tracker_chart_title: "تقييم مقياس GAD-7 الأسبوعي",
         tracker_btn: "ابدأ تقييم مقياس GAD-7 📋",
         tracker_history_title: "سجل التقييمات",
@@ -454,19 +477,19 @@ const L10N_DICT = {
         
         settings_title: "الإعدادات",
         settings_worry_lbl: "الوقت المحدد لوقت القلق اليومي:",
-        settings_worry_sub: "خصص 15 دقيقة يومياً تكون فيها بمفردك ودون أي مقاطعة.",
-        settings_mixer_title: "خلاط الأصوات (مستوى صوت أصوات الطبيعة الاصطناعية)",
-        settings_rain_lbl: "صوت تساقط المطر (مرشح الضوضاء الوردية)",
-        settings_waves_lbl: "أمواج البحر (مرساة الجهاز العصبي للاسترخاء)",
-        settings_wind_lbl: "رياح الغابة (محاكاة هبوب الرياح الهادئة)",
-        settings_chimes_lbl: "أجراس الرياح (أجراس معدنية خماسية النغمات) 🔔",
-        settings_brown_lbl: "الضوضاء البنية (ترددات منخفضة لعمق الاسترخاء)",
+        settings_worry_sub: "خصص نافذة زمنية يومية للحد من حلقات التفكير المفرط غير الفعالة.",
+        settings_mixer_title: "تعديل الاستثارة السمعية (مستويات الممزج)",
+        settings_rain_lbl: "الضوضاء الوردية (محاكاة الضوضاء الوردية المفلترة)",
+        settings_waves_lbl: "تذبذب منخفض التردد (تحفيز الاتساق القلبي)",
+        settings_wind_lbl: "مرشح ضوضاء التعديل العشوائي (رياح الغابة)",
+        settings_chimes_lbl: "إشارات رنين خماسية النغمات (اليقظة الدقيقة) 🔔",
+        settings_brown_lbl: "الضوضاء البنية (دمج الأطياف العميقة)",
         settings_save_btn: "حفظ الإعدادات",
         settings_reset_btn: "حذف جميع البيانات",
         settings_export_btn: "تصدير التقرير للمعالج النفسي (JSON) 📤",
         
         sos_title: "طوارئ وتأريض",
-        sos_subtitle: "قد يشعرك القلق بتهديد شديد، لكنه شعور مؤقت وعابر. أنت في أمان تام هنا. دعنا نعيدك للهدوء الحسي.",
+        sos_subtitle: "استثارة فسيولوجية حادة مفرطة الديناميكية. استخدم تدخلات جسدية محددة لتنشيط مكابح العصب الحائر الباراسمبتاوية.",
         sos_vagus_title: "إعادة ضبط العصب الحائر الفوري: التنهد الفسيولوجي",
         sos_vagus_desc: "1. خذ شهيقاً **عميقاً جداً** من الأنف.<br>2. خذ شهيقاً **إضافياً سريعاً** فوراً بعده.<br>3. ازفر الهواء **ببطء شديد وتام** من الفم.<br><br>*كرر هذا 3 مرات متتالية الآن.*",
         sos_breath_btn: "ابدأ اتساق التنفس الموجه 🌀",
@@ -475,8 +498,8 @@ const L10N_DICT = {
         sos_helpline_2: "خط مساعدة الأطفال والشباب",
         sos_helpline_3: "خط الاستشارات النفسية للاكتئاب والقلق",
         sos_helpline_4: "الإسعاف الطبي الطارئ السريع",
-        gad_title: "استبيان مقياس GAD-7 السريري",
-        gad_subtitle: "كم مرة شعرت بالانزعاج بسبب المشاكل التالية خلال الأسبوعين الماضيين؟",
+        gad_title: "التشخيص الموحد لمقياس GAD-7 لمتابعة الحالة",
+        gad_subtitle: "تقييم شدة أعراض القلق العام خلال فترة الأسبوعين الماضيين.",
         gad_q1: "1. الشعور بالعصبية أو القلق أو التوتر الشديد",
         gad_q2: "2. عدم القدرة على إيقاف القلق أو السيطرة عليه",
         gad_q3: "3. القلق المفرط بشأن أشياء مختلفة كثيرة",
@@ -533,11 +556,34 @@ const L10N_DICT = {
         values_cat_health: "الصحة والعناية بالذات",
         values_cat_growth: "العمل والنمو الشخصي",
         values_cat_mindfulness: "اليقظة والهدوء والراحة",
-        values_placeholder: "ما الذي يهمك وله قيمة حقيقية بالنسبة لك في هذا المجال؟",
+        values_placeholder: "ما الذي يهمك وله قيمة حقيقية بالنسبة لك في هذا مجال؟",
         values_action_lbl: "خطوتي الملموسة لليوم:",
         values_action_placeholder: "مثال: الاتصال بصديق لمدة 5 دقائق أو المشي اليقظ",
         values_save: "حفظ خطوة القيمة 🎯",
-        values_dashboard_card: "خطوات القيم اليومية"
+        values_dashboard_card: "خطوات القيم اليومية",
+
+        // New localized additions from index.html in Arabic
+        dashboard_mct_desc: "التدريب الميتا-معرفي (MCT): توجيه الانتباه وتأجيل القلق المنظم.",
+        dashboard_schemas_desc: "تحليل المخططات: استكشاف المعتقدات الأساسية العميقة والإدراك غير الفعال.",
+        dashboard_values_desc: "توجيه القيم (ACT): تنفيذ منظم للالتزامات السلوكية القائمة على القيم.",
+        tapping_start_btn: "ابدأ جلسة النقر 🧘‍♀️",
+        tapping_point_sidehand: "جانب اليد (نقطة الكاراتيه)",
+        defusion_max_chars: "الحد الأقصى 35 حرفاً",
+        mct_att_left: "اليسار",
+        mct_att_center: "المنتصف",
+        mct_att_right: "اليمين",
+        exp_new_title: "التخطيط لتجربة سلوكية",
+        exp_prediction_lbl: "1. التوقع العقلاني لسيناريو التهديد (الفرضية):",
+        exp_probability_lbl: "احتمال الحدوث الذاتي (0-100٪):",
+        exp_severity_lbl: "العبء العاطفي المتوقع (1-10):",
+        exp_design_lbl: "2. الإعداد التجريبي للتفنيد (تصميم التدخل):",
+        exp_complete_title_modal: "التقييم التجريبي والدمج",
+        exp_fear_was: "التهديد المتوقع:",
+        exp_outcome_lbl: "1. النتيجة التجريبية (ماذا حدث بالفعل؟):",
+        exp_learning_lbl: "2. التكيف المعرفي والدمج العصبي المرن (الاستنتاج):",
+        exp_save_btn: "حفظ الاستنتاجات في الذاكرة طويلة المدى 💾",
+        psy_back: "السابق",
+        psy_next: "التالي"
     }
 };
 
@@ -626,11 +672,11 @@ class RuheOaseApp {
         // CBT thoughts Coach
         this.coachStep = 0;
         this.coachTempData = { original: "", evidence: "", distortion: "", reframed: "" };
-        this.coachDistortions = [
-            { id: "catastrophizing", de: "Katastrophisieren", ar: "التفكير الكارثي", desc_de: "Vom schlimmsten Fall ausgehen.", desc_ar: "افترض حدوث أسوأ سيناريو ممكن." },
-            { id: "blackwhite", de: "Schwarz-Weiß-Denken", ar: "تفكير الكل أو لا شيء", desc_de: "Alles als perfekt oder gescheitert sehen.", desc_ar: "رؤية الأمور إما كاملة ومثالية أو فاشلة تماماً." },
-            { id: "mindreading", de: "Gedankenlesen", ar: "قراءة الأفكار", desc_de: "Glauben zu wissen, was andere schlecht über einen denken.", desc_ar: "الاعتقاد بأنك تعرف ما يظنه الآخرون بسوء عنك." },
-            { id: "emotional", de: "Emotionale Beweisführung", ar: "الاستدلال العاطفي", desc_de: "Fühlen mit Fakten verwechseln ('Ich fühle mich ängstlich, also ist es gefährlich').", desc_ar: "خلط المشاعر بالحقائق (مثال: 'أشعر بالخوف إذن هناك خطر حقيقي')." }
+                this.coachDistortions = [
+            { id: "catastrophizing", de: "Katastrophisierende Extrapolierung", ar: "الاستقراء الكارثي", desc_de: "Systematisches Antizipieren maximaler Schadensszenarien bei Vernachlässigung von Eintrittswahrscheinlichkeiten.", desc_ar: "الافترض المنهجي لسيناريوهات الضرر الأقصى مع تجاهل احتمالات الحدوث الفعلية." },
+            { id: "blackwhite", de: "Dichotome Kognition (Schwarz-Weiß)", ar: "الادراك الثنائي (الكل أو لا شيء)", desc_de: "Binäre Kategorisierung komplexer Zustände unter Ausschluss intermediärer Abstufungen.", desc_ar: "تصنيف ثنائي للحالات المعقدة مع استبعاد التدرجات الوسيطة." },
+            { id: "mindreading", de: "Projektive Kognition (Gedankenlesen)", ar: "الادراك الإسقاطي (قراءة الأفكار)", desc_de: "Hypothetische Zuschreibung negativer intentionaler Zustände auf andere Personen ohne empirischen Beleg.", desc_ar: "الإسناد الافتراضي لحالات قصدية سلبية على الآخرين دون دليل تجريبي." },
+            { id: "emotional", de: "Emotionale Beweisführung", ar: "الاستدلال الوعائي العاطفي", desc_de: "Kognitiver Fehlschluss, bei dem subjektive affektive Zustände als objektive Evidenz für Gefahren bewertet werden.", desc_ar: "مغالطة معرفية يتم فيها تقييم الحالات العاطفية الذاتية كدليل موضوعي على الخطر." }
         ];
 
         // Bindings
@@ -1891,109 +1937,109 @@ class RuheOaseApp {
         // Build psycho education modules in both DE and AR
         const lang = this.state.settings.language;
 
-        const modulesDE = [
+                const modulesDE = [
             {
-                title: "Modul 1: Was ist GAD?",
+                title: "Modul 1: Neurobiologie der generalisierten Angst",
                 slides: [
                     {
-                        title: "Der ständige Alarmzustand",
-                        content: "Generalized Anxiety Disorder (GAD) bedeutet, dass dein Nervensystem sich in einem kontinuierlichen, unterschwelligen Alarmzustand befindet. Das Gehirn (vor allem die Amygdala) scannt die Umgebung dauernd nach Bedrohungen ab, selbst wenn alles in Ordnung ist.",
-                        highlight: "Deine Angst ist kein Defekt. Sie ist ein überaktiver Schutzmechanismus."
+                        title: "Amygdala-Hyperaktivität & Tonisches Arousal",
+                        content: "Generalized Anxiety Disorder (GAD) manifestiert sich neurobiologisch als persistierende, unterschwellige Dysregulation des autonomen Nervensystems. Die Amygdala verbleibt in einem chronischen Hyperaktivitätszustand und triggert kontinuierlich defensive Stressreaktionen, unbeeinflusst von der Abwesenheit realer Umweltstressoren.",
+                        highlight: "Die Angstreaktion ist kein struktureller Defekt, sondern eine evolutionär konservierte, dysregulationsempfindliche Defensivreaktion."
                     },
                     {
-                        title: "Die Illusion der Kontrolle",
-                        content: "Menschen mit GAD neigen dazu, Grübeln und Sorgen als 'Schutzschild' zu missbrauchen. Unterbewusst glaubt man: 'Wenn ich mir nur genug Sorgen mache, bin ich auf jede Katastrophe vorbereitet.' Dies ist jedoch eine Illusion, die nur Erschöpfung erzeugt.",
-                        highlight: "Grübeln verhindert keine Katastrophen. Es stiehlt nur deine Gegenwart."
+                        title: "Kognitive Kontrollillusionen & Metasorgen",
+                        content: "Chronisches Grübeln fungiert oft als dysfunktionale Bewältigungsstrategie. Das Metakognitionssystem etabliert die Überzeugung, dass Antizipation von Katastrophen eine Schutzwirkung entfaltet. Diese kognitive Kontrollillusion perpetuiert das Arousal und führt zur Erschöpfung präfrontaler Kontrollnetzwerke.",
+                        highlight: "Grübelen verringert die Entropie zukünftiger Ereignisse nicht; es erschöpft lediglich die exekutiven Ressourcen im Präfrontalkortex."
                     },
                     {
-                        title: "Der Weg zur Besserung",
-                        content: "Indem wir aufhören, gegen die Sorgen anzukämpfen, und stattdessen lernen, sie zu beobachten, unkontrollierbare Aspekte loszulassen und das Nervensystem physiologisch zu beruhigen (z.B. durch Resonanzatmung), kalibrieren wir den internen Gefahrenmelder neu.",
-                        highlight: "Jedes Mal, wenn du eine Sorge parkst und verschiebst, trainierst du dein Gehirn in Sicherheit."
+                        title: "Neuronale Plastizität & Präfrontale Regulation",
+                        content: "Die Reduktion der Symptomatik gelingt durch Hemmung der kognitiven Perseveration und gezielte Stimulierung top-down regulierender präfrontaler Areale. Techniken wie Sorgenaufschub (MCT) und Vagusstimulation senken die neuronale Reaktivität und fördern synaptische Umstrukturierung (Extinktionslernen).",
+                        highlight: "Durch die Reduktion perseverativer Gedankenketten wird das Bedrohungssystem des Gehirns systematisch desensibilisiert."
                     }
                 ]
             },
             {
-                title: "Modul 2: Die Sorgen-Falle",
+                title: "Modul 2: Kognitive Perseveration & Metakognition",
                 slides: [
                     {
-                        title: "Warum Sorgen haften bleiben",
-                        content: "Sorgen sind wie Klettverschluss für das Gehirn. Sobald ein 'Was-wäre-wenn'-Gedanke auftaucht, reagiert das Gehirn mit einem Stresssignal. Wir versuchen, die Sorge sofort logisch zu lösen. Durch diese ständige Beschäftigung signalisieren wir dem Gehirn: 'Dieses Thema ist lebenswichtig!', und die Sorge verfestigt sich.",
-                        highlight: "Aufmerksamkeit füttert die Angst. Verschieben entzieht ihr den Nährboden."
+                        title: "Verstärkungsmechanismen perseverativer Kognitionen",
+                        content: "Was-wäre-wenn-Kognitionen aktivieren vegetative Angstreaktionen. Der unmittelbare Versuch, diese gedanklich aufzulösen, wirkt als negative Verstärkung (Erleichterung) und signalisiert dem Arbeitsgedächtnis die Priorität des Triggers. Dies führt zur Chronifizierung perseverativer Schleifen.",
+                        highlight: "Selektive Aufmerksamkeit auf vegetative Symptome verfestigt die dysfunktionale Bedrohungsevaluierung."
                     },
                     {
-                        title: "Metasorgen (Sorgen über Sorgen)",
-                        content: "Oft fangen wir an, uns darüber Sorgen zu machen, dass wir uns Sorgen machen: 'Ich werde noch verrückt vor Sorgen', oder 'Dieser Stress macht mich krank.' Dies ist die zweite Schicht der Angst. Sie lässt sich abbauen, indem wir die Sorgen wertfrei als das akzeptieren, was sie sind: bloße Gedanken.",
-                        highlight: "Ein Gedanke ist kein Befehl und keine Realität. Er ist nur ein Satz im Kopf."
+                        title: "Metakognitive Dysfunktion (Typ-2-Sorgen)",
+                        content: "Typ-2-Sorgen (Metasorgen) bezeichnen kognitive Evaluationen über die eigenen Denkprozesse ('Mein Grübeln ist unkontrollierbar oder schädlich'). Diese kognitiven Fehleinschätzungen blockieren die natürliche Extinktion der Angstreaktion. Der Abbau gelingt durch metakognitive Distanzierung (Detached Mindfulness).",
+                        highlight: "Gedanken sind temporäre kognitive Repräsentationen und besitzen keine intrinsische Realität oder Handlungsaufforderung."
                     }
                 ]
             },
             {
-                title: "Modul 3: Der Vagusnerv",
+                title: "Modul 3: Vegetatives Nervensystem & Polyvagal-Regulation",
                 slides: [
                     {
-                        title: "Die Bremse des Körpers",
-                        content: "Der Vagusnerv ist der Hauptakteur deins Parasympathikus – dem Ruhenerv. Er fungiert als eingebaute Bremse für die Kampf-oder-Flucht-Reaktion. Wenn du gestresst bist, ist dieser Nerv unteraktiv. Wir können ihn direkt über physiologische Manöver stimulieren.",
-                        highlight: "Du kannst deinen Verstand beruhigen, indem du deinen Körper regulierst."
+                        title: "Sympathovagale Balance & Nervus Vagus",
+                        content: "Der Nervus Vagus (10. Hirnnerv) moduliert das parasympathische System und dient als primärer kardialer Inhibitor. Bei chronischer Angst überwiegt die sympathische Aktivierung (Fight-or-Flight). Die gezielte somatosensorische und respiratorische Vagusaktivierung reaktiviert die kardiale Bremse.",
+                        highlight: "Physiologische Homöostase induziert top-down eine neuronale Beruhigung in kortikalen Angstzentren."
                     },
                     {
-                        title: "Resonanzfrequenz & Herzfrequenzvariabilität (HRV)",
-                        content: "Atmen wir mit genau 6 Atemzügen pro Minute (5 Sekunden ein, 5 aus), gerät der Blutdruckrhythmus mit der Herzfrequenz in Resonanz. Das signalisiert dem Hirnstamm maximale Sicherheit und der Herzschlag passt sich geschmeidig an. Das senkt Cortisol und Adrenalin rasant.",
-                        highlight: "Schon 5 Minuten Resonanzatmung senken den Stresspegel für Stunden."
+                        title: "Kardiorespiratorische Kohärenz & HRV-Optimierung",
+                        content: "Atemzyklen im Frequenzbereich von ~0.1 Hz (6 Atemzüge/Minute) maximieren die respiratorische Sinusarrhythmie. Diese cardiopulmonale Resonanz optimiert den Baroreflex und steigert die Herzfrequenzvariabilität (HRV), was direkt mit verbesserter präfrontaler Emotionsregulation korreliert.",
+                        highlight: "Gezielte respiratorische Frequenzstimulation optimiert nachweislich den autonomen Regulationsindex."
                     }
                 ]
             },
             {
-                title: "Modul 4: Rückfall-Prävention",
+                title: "Modul 4: Adaptives Coping & Extinktionskonsolidierung",
                 slides: [
                     {
-                        title: "Erholung verläuft wellenförmig",
-                        content: "Heilung verläuft niemals geradlinig. Es wird Tage geben, an denen die Angst scheinbar ohne Grund zurückkehrt. Dies ist kein Rückschritt und kein Scheitern! Es ist ein normaler biologischer Pendelschlag. Wichtig ist nur, wie du darauf reagierst.",
-                        highlight: "Ein schlechter Tag hebt die Fortschritte von Wochen nicht auf."
+                        title: "Nicht-lineare Remission & Erholungsverlauf",
+                        content: "Die Reduktion der Angstsymptome verläuft phasenhaft und unterliegt neurobiologischen Fluktuationen. Temporäre Arousal-Peaks sind keine Indikatoren für Therapieversagen, sondern physiologische Schwankungen während des neuronalen Umbauprozesses. Sie bieten wertvolle Gelegenheiten zur Konsolidierung neuer Bewältigungsmuster.",
+                        highlight: "Akute vegetative Symptomfluktuationen deuten nicht auf einen Verlust erlernter Coping-Strategien hin."
                     },
                     {
-                        title: "Dein Notfallplan (SOS)",
-                        content: "Wenn eine Angstwelle rollt: 1. Nichts erzwingen. Akzeptiere die Welle. 2. Körperlich erden (5-4-3-2-1 Methode). 3. Vagusnerv aktivieren (Doppelseufzer). 4. Keine voreiligen Entscheidungen treffen. Lass die Welle durchlaufen, sie flacht biologisch nach maximal 20-30 Minuten ab.",
-                        highlight: "Angst ist wie ein Sturm: Er schüttelt dich durch, aber er zieht immer vorüber."
+                        title: "Strukturiertes Expositions- & Erdungsprotokoll",
+                        content: "Bei akutem physiologischem Hyperarousal: 1. Keine Vermeidungsreaktion einleiten (Kognitive Akzeptanz). 2. Somatosensorische Diskrimination aktivieren (5-4-3-2-1 Erdungsprotokoll). 3. Aktivierung des okulokardialen Reflexes oder Durchführung physiologischer Seufzer zur akuten Vagus-Inhibition.",
+                        highlight: "Die physiologische Angstreaktion unterliegt einer biologischen Sättigungsgrenze und flacht durch Habituation ab."
                     }
                 ]
             },
             {
-                title: "Modul 5: Kognitive Arbeit",
+                title: "Modul 5: Kognitive Restrukturierung & Distanzierung",
                 slides: [
                     {
-                        title: "Automatische Gedanken entlarven",
-                        content: "Wenn Angst aufkommt, schießt uns oft blitzschnell ein automatischer Gedanke durch den Kopf (z. B. 'Ich schaffe das nicht' oder 'Etwas Schreckliches wird passieren'). Diese Gedanken wirken wie Wahrheiten, sind aber in Wirklichkeit nur mentale Gewohnheiten oder Interpretationen, keine Fakten.",
-                        highlight: "Gedanken sind mentale Ereignisse, keine bewiesenen Tatsachen."
+                        title: "Kognitive Verzerrungen & Automatische Gedanken",
+                        content: "In stressbehafteten Situationen generiert das Gehirn hochautomatisierte kognitive Appraisals (z. B. 'Ich dekompensiere'). Diese unbewussten Bewertungen basieren auf gespeicherten Repräsentationen und werden fälschlicherweise als objektive Fakten verarbeitet.",
+                        highlight: "Automatische Kognitionen sind hypothetische Konstrukte, keine verifizierten Realitäten."
                     },
                     {
-                        title: "Denkfehler hinterfragen",
-                        content: "Angstgedanken nutzen oft typische Denkfehler (kognitive Verzerrungen). Die häufigsten sind Katastrophisieren ('Es wird im schlimmsten Szenario enden') und Schwarz-Weiß-Denken ('Wenn ich nicht perfekt ruhig bin, habe ich versagt'). Wenn wir diese Muster erkennen, verlieren sie ihre Macht.",
-                        highlight: "Frag dich: Gibt es Beweise für diese Annahme? Was würde ich einem Freund raten?"
+                        title: "Strukturanalyse kognitiver Bias",
+                        content: "Angstinduzierte kognitive Verzerrungen (z. B. Katastrophisierung, dichotomes Denken) filtrieren die Wahrnehmung asymmetrisch zugunsten von Bedrohungssignalen. Die Identifikation dieser kognitiven Filter schwächt ihre verhaltenssteuernde Wirkung ab.",
+                        highlight: "Die Identifikation systematischer Denkfehler entzieht dysfunktionalen Schemata die logische Grundlage."
                     },
                     {
-                        title: "Ausgewogene Gedanken formulieren",
-                        content: "Das Ziel ist nicht erzwungenes positives Denken, sondern realistisches Denken. Statt 'Ich verliere die Kontrolle' formulieren wir einen ausgewogenen Gedanken: 'Ich fühle mich gerade sehr unruhig, aber das Gefühl wird vorbeigehen und ich habe Werkzeuge, um mich zu erden.'",
-                        highlight: "Ersetze Panik-Szenarien durch realistische Wahrscheinlichkeiten."
+                        title: "Synthese balancierter kognitiver Alternativen",
+                        content: "Ziel kognitiver Restrukturierung ist nicht Autosuggestion, sondern rationale Re-Evaluation. Durch empirische Überprüfung wird das dysfunktionale Appraisal durch eine kognitiv balancierte, nuancierte Formulierung ersetzt, die neuronale Aktivierungsmuster modifiziert.",
+                        highlight: "Substituiere angstassoziierte Appraisals durch realitätskonforme kognitive Modelle."
                     }
                 ]
             },
             {
-                title: "Modul 6: Anderen helfen",
+                title: "Modul 6: Interpersonelle Co-Regulation & Systemisches Coping",
                 slides: [
                     {
-                        title: "Da sein ohne zu bewerten",
-                        content: "Wenn jemand in deiner Nähe eine Panikattacke oder starke Angst erlebt, ist deine ruhige Präsenz das wertvollste Geschenk. Vermeide Ratschläge wie 'Beruhige dich' oder 'Stell dich nicht so an' – das erhöht nur den Druck. Sag lieber: 'Ich bin da. Du bist in Sicherheit.'",
-                        highlight: "Deine Ruhe überträgt sich auf das Nervensystem des anderen (Co-Regulation)."
+                        title: "Dyadische Co-Regulation & Non-Invasive Validierung",
+                        content: "Bei akuter Fremdangst wirkt die eigene vegetative Stabilität als physiologische Co-Regulation. Ratschläge oder Frustration aktivieren Abwehrreaktionen und erhöhen das Arousal des Betroffenen. Indiziert ist die non-invasive Validierung des Affekts und ruhige, präsente Begleitung.",
+                        highlight: "Deine autonome vegetative Stabilität moduliert direkt das Erregungsniveau deines Interaktionspartners."
                     },
                     {
-                        title: "Aktive Erdung anleiten",
-                        content: "Hilf der betroffenen Person, aus dem Kopf zurück in den Körper zu kommen. Leite sie sanft an: 1. Gemeinsam tief ausatmen (Doppelseufzer). 2. Nach 5 Dingen im Raum suchen lassen (5-4-3-2-1 Methode). 3. Sanften Druck auf die Schultern anbieten, um körperliche Präsenz zu spüren.",
-                        highlight: "Lenke den Fokus weg von den Gedanken hin zu den Sinnen."
+                        title: "Anleitung sensomotorischer Re-Fokussierung",
+                        content: "Unterstütze die neuronale De-Eskalation des Partners durch gezielte Lenkung der Aufmerksamkeit: 1. Cardiopulmonale Synchronisation durch gemeinsamen physiologischen Doppelseufzer. 2. Sensomotorische Re-Fokussierung mittels sensorischem Diskriminationstraining.",
+                        highlight: "Verschiebe den neuronalen Fokus weg von internen Bedrohungssignalen hin zu exterozeptiven Reizen."
                     },
                     {
-                        title: "Grenzen und Selbstschutz",
-                        content: "Anderen zu helfen erfordert Kraft. Achte auf deine eigenen Grenzen. Du bist kein Therapeut, sondern ein Unterstützer. Begleite die Person, falls nötig, zu professioneller Hilfe und sorge nach der Unterstützung für deine eigene Entlastung.",
-                        highlight: "Du kannst nur eine Stütze sein, wenn du selbst stabil stehst."
+                        title: "Systemische Abgrenzung & Funktionale Allokation",
+                        content: "Interpersonelle Unterstützung beansprucht begrenzte kognitive Ressourcen. Setze klare Grenzen zur Vermeidung emotionaler Überlastung (Sekundärtraumatisierung). Fördere die Transition zu professioneller Hilfe und sorge anschließend für eigene psychische Regeneration.",
+                        highlight: "Effektive Co-Regulation erfordert eine hinreichende Eigenstabilität und funktionale Grenzen."
                     }
                 ]
             }
@@ -2001,107 +2047,107 @@ class RuheOaseApp {
 
         const modulesAR = [
             {
-                title: "الدرس 1: ما هو القلق العام (GAD)؟",
+                title: "الدرس 1: علم الأعصاب للقلق العام",
                 slides: [
                     {
-                        title: "حالة الإنذار المستمرة",
-                        content: "اضطراب القلق العام (GAD) يعني أن جهازك العصبي في حالة إنذار مستمرة ومنخفضة المستوى. يقوم الدماغ (خاصة اللوزة الدماغية) بمسح البيئة باستمرار بحثًا عن التهديدات، حتى عندما يكون كل شيء على ما يرام.",
-                        highlight: "قلقك ليس عيبًا فيك، بل هو آلية حماية مفرطة النشاط."
+                        title: "فرط نشاط اللوزة الدماغية والاستثارة المستمرة",
+                        content: "يتجلى اضطراب القلق العام (GAD) بيولوجيًا كخلل وظيفي مستمر ومنخفض المستوى في تنظيم الجهاز العصبي الذاتي. تظل اللوزة الدماغية في حالة فرط نشاط مزمن، مما يحفز ردود فعل دفاعية مستمرة ضد الإجهاد والتوتر، دون التأثر بغياب مهددات بيئية حقيقية.",
+                        highlight: "استجابة القلق ليست عيبًا بنيويًا، بل هي رد فعل دفاعي محفوظ تطوريًا وحساس للاختلال التنظيمي."
                     },
                     {
-                        title: "وهم السيطرة والتحكم",
-                        content: "يميل الأشخاص المصابون بالقلق العام إلى استخدام التفكير المفرط والقلق كـ 'درع واقي'. يعتقد العقل الباطن: 'إذا قلقت بما فيه الكفاية، سأكون مستعدًا لأي كارثة.' ولكن هذا وهم لا ينتج عنه سوى الإنهاك والتعب.",
-                        highlight: "القلق لا يمنع الكوارث، بل يسرق فقط لحظتك الحالية."
+                        title: "أوهام التحكم المعرفي والقلق الميتا-معرفي",
+                        content: "غالبًا ما يعمل القلق المزمن كآلية مواجهة غير فعالة. يؤسس نظام الإدراك الفوقي (الميتا-معرفة) الاعتقاد بأن توقع الكوارث يوفر حماية معينة. هذا الوهم بالسيطرة المعرفية يطيل الاستثارة ويؤدي إلى استنفاد شبكات التحكم الفص الجبهي.",
+                        highlight: "التفكير المفرط لا يقلل من عشوائية الأحداث المستقبلية؛ بل يستنزف فقط الموارد التنفيذية في قشرة الفص الجبهي."
                     },
                     {
-                        title: "طريق التحسن والتعافي",
-                        content: "عندما نتوقف عن محاربة المخاوف ونتعلم بدلاً من ذلك مراقبتها، وتحرير الجوانب التي لا يمكن السيطرة عليها، وتهدئة الجهاز العصبي عضويًا (مثل اتساق التنفس)، فإننا نعيد معايرة مستشعر الخطر الداخلي.",
-                        highlight: "في كل مرة تقوم فيها بركن خوف وتأجيله، فإنك تدرب دماغك على الأمان."
+                        title: "المرونة العصبية والتنظيم الجبهي",
+                        content: "تتحقق التهدئة العرضية عن طريق تثبيط التفكير المستمر والتحفيز الموجه لمناطق قشرة الفص الجبهي المنظمة من الأعلى إلى الأسفل. تقنيات مثل تأجيل القلق (MCT) وتحفيز العصب الحائر تقلل من الاستجابة العصبية وتعزز إعادة الهيكلة التشابكية (تعلم التلاشي).",
+                        highlight: "من خلال تقليل سلاسل الأفكار المستمرة، يتم تقليل حساسية نظام التهديد في الدماغ بشكل منهجي."
                     }
                 ]
             },
             {
-                title: "الدرس 2: فخ القلق المفرط",
+                title: "الدرس 2: التفكير المفرط والبيانات الميتا-معرفية",
                 slides: [
                     {
-                        title: "لماذا تلتصق المخاوف؟",
-                        content: "المخاوف تشبه شريط لاصق للدماغ. بمجرد ظهور فكرة 'ماذا لو'، يستجيب الدماغ بإشارة ضغط وتوتر. نحاول حل الخوف فورًا بشكل منطقي. ومن خلال هذا الانشغال المستمر، نرسل إشارة للدماغ بأن هذا الموضوع حيوي وهام جداً للبقاء، مما يؤدي إلى ترسيخ الخوف.",
-                        highlight: "الاهتمام والتركيز يغذي القلق. والتأجيل يقطع عنه هذا الغذاء."
+                        title: "آليات تعزيز التفكير المعرفي المستمر",
+                        content: "تنشط التساؤلات الافتراضية ('ماذا لو') الاستجابات العصبية الذاتية للقلق. المحاولة الفورية لحلها فكرياً تعمل كتعزيز سلبي (شعور بالراحة المؤقتة) وتؤكد لذاكرة العمل أولوية المحفز، مما يؤدي إلى مزمنة هذه الحلقات التفكيرية المفرطة.",
+                        highlight: "التركيز الانتقائي على الأعراض الجسدية الذاتية يرسخ التقييم غير الفعال للتهديد."
                     },
                     {
-                        title: "القلق بشأن القلق (Metasorgen)",
-                        content: "غالبًا ما نبدأ في القلق بشأن قلقنا: 'سأفقد عقلي بسبب القلق'، أو 'هذا التوتر سيمرضني'. هذه هي الطبقة الثانية من القلق. ويمكن تفكيكها من خلال قبول المخاوف دون إصدار أحكام، على أنها مجرد أفكار عابرة في الرأس.",
-                        highlight: "الفكرة ليست حقيقة مطلقة وليست أمراً واقعاً. إنها مجرد جملة في عقلك."
+                        title: "الخلل الميتا-معرفي (قلق النوع الثاني)",
+                        content: "يشير قلق النوع الثاني (الميتا-قلق) إلى التقييمات المعرفية حول العمليات الفكرية الذاتية ('قلقي غير قابل للسيطرة وضار'). تعوق هذه التقييمات المعرفية الخاطئة التلاشي الطبيعي لاستجابة الخوف. ويتحقق تفكيكها من خلال الانفصال الميتا-معرفي واليقظة المنفصلة (Detached Mindfulness).",
+                        highlight: "الأفكار هي تمثيلات معرفية مؤقتة ولا تمتلك واقعاً جوهرياً أو طلباً فورياً للتنفيذ."
                     }
                 ]
             },
             {
-                title: "الدرس 3: العصب الحائر",
+                title: "الدرس 3: الجهاز العصبي والتنظيم البولي-فيغالي",
                 slides: [
                     {
-                        title: "فرامل استرخاء الجسد",
-                        content: "العصب الحائر هو اللاعب الرئيسي في الجهاز العصبي الباراسمبثاوي (الناقل للاسترخاء). إنه يعمل كفرامل مدمجة للاستجابة للقتال أو الهروب. عندما تكون متوترًا، يكون هذا العصب خاملًا. ويمكننا تنشيطه مباشرة من خلال حركات جسدية ملموسة.",
-                        highlight: "يمكنك تهدئة عقلك مباشرة عن طريق تنظيم وتهدئة جسدك أولاً."
+                        title: "التوازن السمبتاوي والباراسمبتاوي والعصب الحائر",
+                        content: "ينظم العصب الحائر (العصب القحفي العاشر) الجهاز الباراسمبتاوي ويعمل كعامل كبح أولي للقلب. في حالات القلق المزمن، يطغى التنشيط السمبتاوي (القتال أو الهروب). ويؤدي التنشيط الموجه للعصب الحائر جسدياً وتنفسياً إلى إعادة تفعيل كابح ضربات القلب فسيولوجياً.",
+                        highlight: "يؤدي الاستقرار الفسيولوجي (من الأسفل إلى الأعلى) إلى إحداث تهدئة عصبية في مراكز القلق القشرية."
                     },
                     {
-                        title: "تقلب معدل ضربات القلب والاتساق الفسيولوجي",
-                        content: "عندما نتنفس بمعدل 6 أنفاس في الدقيقة (5 ثوانٍ شهيق، 5 ثوانٍ زفير)، يتزامن إيقاع ضغط الدم مع معدل ضربات القلب. هذا يرسل إشارة أمان قصوى إلى جذع الدماغ، مما يؤدي إلى خفض الكورتيزول والأدرينالين بسرعة فائقة.",
-                        highlight: "5 دقائق فقط من اتساق التنفس تخفض مستويات التوتر لساعات طويلة."
+                        title: "الاتساق القلبي التنفسي وتحسين تقلب معدل ضربات القلب",
+                        content: "دورات التنفس في نطاق تردد يبلغ حوالي 0.1 هرتز (6 أنفاس في الدقيقة) تزيد من اضطراب النظم الجيبي التنفسي. هذا الرنين القلبي الرئوي يحسن المنعكس الضغطي ويزيد من تقلب معدل ضربات القلب (HRV)، وهو ما يرتبط مباشرة بتنظيم انفعالي أفضل.",
+                        highlight: "يحسن التحفيز الترددي التنفسي الموجه بشكل مثبت مؤشر التنظيم الذاتي للجهاز العصبي."
                     }
                 ]
             },
             {
-                title: "الدرس 4: الوقاية من الانتكاسات",
+                title: "الدرس 4: التكيف والدمج التجريبي",
                 slides: [
                     {
-                        title: "التعافي يسير بشكل موجي",
-                        content: "التعافي لا يسير أبدًا في خط مستقيم. ستكون هناك أيام يعود فيها القلق فجأة دون سبب واضح. هذا ليس انتكاسة وليس فشلاً! إنه بندول بيولوجي طبيعي. الأهم هو كيف تتفاعل معه بوعي دون هلع.",
-                        highlight: "اليوم السيء لا يلغي ولا يحذف التقدم الذي أحرزته طوال أسابيع."
+                        title: "التعافي غير الخطي والتقلبات العصبية",
+                        content: "يسير تراجع أعراض القلق في مراحل ويخضع للتقلبات البيولوجية العصبية. ذروات الاستثارة المؤقتة ليست مؤشرات على فشل العلاج، بل هي تقلبات فسيولوجية طبيعية أثناء عملية إعادة البناء العصبي. وهي توفر فرصاً قيمة لدمج أنماط مواجهة جديدة.",
+                        highlight: "التقلبات الجسدية الحادة لا تشير إلى فقدان استراتيجيات المواجهة المكتسبة."
                     },
                     {
-                        title: "خطة الطوارئ الخاصة بك (SOS)",
-                        content: "عندما تأتي موجة القلق: 1. لا تجبر نفسك على شيء، تقبل الموجة. 2. أصل حواسك بالواقع (تمارين 5-4-3-2-1). 3. نشط العصب الحائر (التنهد الفسيولوجي). 4. لا تتخذ قرارات متسرعة. دع الموجة تمر، فهي تتلاشى بيولوجياً بعد 20-30 دقيقة كحد أقصى.",
-                        highlight: "القلق مثل العاصفة: تهزك بقوة، لكنها تعبر بسلام دائماً في النهاية."
+                        title: "بروتوكول التعرض والتأريض المنظم",
+                        content: "في حالات الاستثارة الفسيولوجية الحادة المفرطة: 1. تجنب استجابة التجنب المعرفي (القبول المعرفي). 2. تفعيل التمييز الحسي الجسدي (بروتوكول التأريض 5-4-3-2-1). 3. تنشيط المنعكس العيني القلبي أو إجراء التنهد الفسيولوجي المزدوج لتنشيط كبح العصب الحائر.",
+                        highlight: "تخضع استجابة القلق الجسدية لحدود الإشباع البيولوجي وتتراجع تدريجياً عبر الاعتياد والتعود."
                     }
                 ]
             },
             {
-                title: "الدرس 5: العمل المعرفي",
+                title: "الدرس 5: إعادة الهيكلة والتفكيك المعرفي",
                 slides: [
                     {
-                        title: "كشف الأفكار التلقائية",
-                        content: "عندما ينشأ القلق، غالبًا ما تخطر ببالنا فكرة تلقائية سريعة (مثل: 'لن أتمكن من تجاوز هذا' أو 'شيء فظيع سيحدث'). تبدو هذه الأفكار وكأنها حقائق، لكنها في الواقع مجرد عادات ذهنية أو تفسيرات وليست حقائق واقعية.",
-                        highlight: "الأفكار هي أحداث ذهنية وليست حقائق مثبتة."
+                        title: "التشوهات المعرفية والأفكار التلقائية",
+                        content: "في المواقف الضاغطة، يولد الدماغ تقييمات معرفية آلية للغاية (مثل: 'أنا أنهار تماماً'). تستند هذه التقييمات اللاواعية إلى تمثيلات سابقة مخزنة، ويتم معالجتها خطأً كحقائق موضوعية قائمة في الواقع.",
+                        highlight: "التقييمات التلقائية هي افتراضات معرفية وليست حقائق واقعية مثبتة."
                     },
                     {
-                        title: "التشكيك في أخطاء التفكير",
-                        content: "تستخدم أفكار القلق غالبًا أخطاء تفكير شائعة (تشوهات معرفية). وأبرزها التفكير الكارثي ('سينتهي الأمر بأسوأ سيناريو ممكن') أو تفكير الكل أو لا شيء ('إذا لم أكن هادئًا تمامًا، فقد فشلت'). بمجرد تحديد هذه الأنماط، تفقد قوتها.",
-                        highlight: "اسأل نفسك: هل هناك دليل حقيقي على هذا الافتراض؟ ما الذي كنت سأنصح به صديقًا مقربًا؟"
+                        title: "التحليل البنيوي للانحياز المعرفي",
+                        content: "تقوم التشوهات المعرفية الناجمة عن القلق (مثل الاستقراء الكارثي، والادراك الثنائي) بفلترة الإدراك بشكل غير متماثل لصالح إشارات التهديد. إن تحديد هذه الفلاتر المعرفية يضعف من سيطرتها وتأثيرها على السلوك.",
+                        highlight: "تحديد أخطاء التفكير المنهجية يسحب الأساس المنطقي من المخططات العميقة غير الفعالة."
                     },
                     {
-                        title: "صياغة أفكار متوازنة",
-                        content: "الهدف ليس التفكير الإيجابي القسري، بل التفكير الواقعي. بدلاً من قول 'أنا أفقد السيطرة تمامًا'، نصيغ فكرة متوازنة: 'أشعر بقلق شديد الآن، لكن هذا الشعور سيمر ولدي أدوات حقيقية لتهدئة نفسي.'",
-                        highlight: "استبدل سيناريوهات الهلع بالاحتمالات الواقعية."
+                        title: "تركيب بدائل معرفية متوازنة",
+                        content: "الهدف من إعادة الهيكلة المعرفية ليس الإيحاء الإيجابي القسري، بل التقييم العقلاني القائم على الأدلة. من خلال الفحص التجريبي، يتم استبدال التقييم القديم بصياغة متوازنة بديلة تعدل مسارات النشاط العصبي المرتبطة بالقلق.",
+                        highlight: "استبدل التقييمات المرتبطة بالذعر بنماذج معرفية متوافقة مع الواقع الحقيقي."
                     }
                 ]
             },
             {
-                title: "الدرس 6: مساعدة الآخرين",
+                title: "الدرس 6: التنظيم المشترك وديناميكيات الدعم الجماعي",
                 slides: [
                     {
-                        title: "التواجد دون إصدار أحكام",
-                        content: "عندما يمر شخص قريب منك بنوبة هلع أو قلق شديد، فإن وجودك الهادئ هو أثمن هدية. تجنب تقديم نصائح مثل 'اهدأ فقط' أو 'لا داعي لكل هذا' - فهذا يزيد الضغط. قل بدلاً من ذلك: 'أنا هنا بجانبك. أنت في أمان.'",
-                        highlight: "هدوؤك ينتقل مباشرة إلى الجهاز العصبي للشخص الآخر (التنظيم المشترك)."
+                        title: "التنظيم المشترك الثنائي والقبول غير الباضع",
+                        content: "في حالات قلق الآخرين الحاد، يعمل استقرارك الفسيولوجي الذاتي كتنظيم فسيولوجي مشترك. النصائح المتعجلة أو الإحباط يفعلان استجابات دفاعية ويزيدان من توتر الشخص. الإجراء الموصى به هو القبول والتحقق غير الباضع من المشاعر مع الحضور الهادئ والمستمر.",
+                        highlight: "استقرارك الذاتي الفسيولوجي ينظم مباشرة مستوى الاستثارة الفسيولوجية لشريكك التفاعلي."
                     },
                     {
-                        title: "توجيه الاتصال الحسي بالواقع",
-                        content: "ساعد الشخص المصاب على الخروج من الأفكار والعودة إلى الجسد. وجهه بلطف: 1. تنفسا معًا بعمق (التنهد الفسيولوجي). 2. اطلب منه البحث عن 5 أشياء حوله في الغرفة (تمارين 5-4-3-2-1). 3. اعرض عليه ضغطًا خفيفًا ودافئًا على الكتفين للشعور بالحضور الجسدي.",
-                        highlight: "وجه انتباهه بعيدًا عن الأفكار ونحو الحواس الجسدية."
+                        title: "توجيه إعادة التركيز الحسي الحركي",
+                        content: "ادعم تراجع الاستثارة العصبية للشريك من خلال التوجيه الهادف لانتباهه: 1. المزامنة القلبية الرئوية عبر التنهد الفسيولوجي المزدوج المشترك. 2. إعادة التركيز الحسي الحركي عبر تمرين التمييز الحسي الخارجي.",
+                        highlight: "انقل التركيز العصبي بعيداً عن إشارات التهديد الداخلية نحو المثيرات الحسية الخارجية المحيطة."
                     },
                     {
-                        title: "الحدود وحماية الذات",
-                        content: "مساعدة الآخرين تتطلب طاقة وقوة. انتبه لحدودك الخاصة. أنت لست معالجًا نفسيًا، بل أنت داعم ومساند. رافق الشخص إذا لزم الأمر للحصول على مساعدة مهنية متخصصة، واحرص على راحة نفسك وتخفيف الضغط عنها بعد الدعم.",
-                        highlight: "لا يمكنك أن تكون ركيزة قوية للآخرين إلا إذا كنت أنت نفسك مستقرًا ومتزنًا."
+                        title: "الحدود والتوزيع الوظيفي للمسؤوليات",
+                        content: "الدعم والمساندة المتبادلة تستهلك موارد معرفية محدودة. ضع حدوداً واضحة لتجنب الإرهاق العاطفي الثانوي. شجع الانتقال إلى مساعدة مهنية متخصصة عند الحاجة، واحرص على تجديد طاقتك النفسية بعد تقديم الدعم.",
+                        highlight: "التنظيم المشترك الفعال يتطلب استقراراً ذاتياً كافياً وحدوداً وظيفية واضحة."
                     }
                 ]
             }
